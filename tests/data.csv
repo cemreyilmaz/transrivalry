@@ -1,0 +1,266 @@
+age;sex;education;diopter_right;diopter_left;handedness;logMAR_both;logMAR_right;logMAR_left;stereoacuity;subject_id;session_code;run_code;run_name;cat_id;notes;category_code;category_name;mixed_percept;dynamism;frequency;duration;speed
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;1;RivalryGratings;001-1-1-1;dynamically overlapping - without 50-50 superimposed percept;1;try;yes;dynamism;50;1;50
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;1;RivalryGratings;001-1-1-2;dynamically overlapping - with 50-50 superimposed percept;NA;;yes;dynamism;50;0.708571429;50
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;2;RivalryImages;001-1-2-1;dynamically overlapping;NA;;yes;dynamic;9.542.857.143;1.811.428.571;8.742.857.143
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;2;RivalryImages;001-1-2-2;immediate;NA;;yes;static;5.142.857.143;0.274285714;NA
+"20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;3;RivalryDots;001-1-3-1;""two motion fighting each other - """"vibrating/trembling dots"""""";NA;;yes;dynamic;3.485.714.286;1;50"
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;3;RivalryDots;001-1-3-2;immediate;NA;;no;NaN;6.914.285.714;NA;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;4;RivalryGratingImage;001-1-4-1;dynamically overlapping;NA;;yes;dynamic;7.542.857.143;1.297.142.857;7.971.428.571
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;4;RivalryGratingImage;001-1-4-2;immediate;NA;;yes;static;1.085.714.286;0.262857143;NA
+"20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;4;RivalryGratingImage;001-1-4-3;""grating is visible at """"background"""" in one part of visual field"";NA;;yes;dynamic;1.228.571.429;0.8;50"
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;5;RivalryDotsImage;001-1-5-1;dots cover face by starting outside/inside/right/left;NA;;yes;dynamism;9.257.142.857;1.817.142.857;8.428.571.429
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;5;RivalryDotsImage;001-1-5-2;immediate;NA;;no;NaN;4;NA;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;6;RivalryDotsGrating;001-1-6-1;dots cover face by starting outside/inside/right/left;NA;;yes;dynamic;9.257.142.857;1;82
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;1;6;RivalryDotsGrating;001-1-6-2;immediate;NA;;no;NaN;9.714.285.714;NA;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;1;RivalryGratings;001-2-1-1;superimposed - until one takes over gradually;NA;;yes;dynamic;70.125;1.325;60.125
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;1;RivalryGratings;001-2-1-2;half;NA;;yes;dynamic;Sep 75;0.725;34.125
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;1;RivalryGratings;001-2-1-3;curtain;NA;;yes;dynamic;Sep 25;0.4975;22.625
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;2;RivalryImages;001-2-2-1;superimposed - change in transparency;NA;;yes;dynamic;98.875;19.775;92.25
+"20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;3;RivalryDots;001-2-3-1;""inward """"fight""""/tremble against outward"";NA;;yes;dynamic;98.125;0.5625;19.625"
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;4;RivalryGratingImage;001-2-4-1;face takes over from centre/ grating from edges;NA;;yes;dynamic;97.75;Jan 67;64.25
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;5;RivalryDotsImage;001-2-5-1;dots appear at edge of and around face and take over ;NA;;yes;dynamic;83.125;18.775;58.875
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;5;RivalryDotsImage;001-2-5-2;immediate;NA;;no;NA;Mrz 75;NA;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;6;RivalryDotsGrating;001-2-6-1;dots take over from centre;NA;;yes;dynamic;42.25;0.755;26.125
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;2;6;RivalryDotsGrating;001-2-6-2;Some parts with dots and others with grating. The size of parts are changing.;NA;;yes;dynamic;65.5;1.005;43.5
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;1;RivalryGratings;001-3-1-1;superimposed - change in transparency;NA;;yes;dynamic;76.75;0.7025;66.625
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;1;RivalryGratings;001-3-1-2;tilted-superimposed-tilted other side - immediate;NA;;yes;static;30.75;0.06;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;2;RivalryImages;001-3-2-1;superimposed- both transparent;NA;;yes;static;44.625;1.795;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;2;RivalryImages;001-3-2-2;superimposed- change in transparency;NA;;yes;dynamic;48.375;0.47;36.25
+"20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;3;RivalryDots;001-3-3-1;""invisible """"line"""" around centre seperates outward from inward until one pushed away"";NA;;yes;dynamic;64;1.225;26. Mai"
+"20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;3;RivalryDots;001-3-3-2;""inward vs outward """"fight""""/tremble"";NA;;yes;dynamic;33.375;Jan 63;42.125"
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;3;RivalryDots;001-3-3-3;all dots tremble between two motions (random?);NA;;yes;dynamic;7.875;0.41;36.25
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;4;RivalryGratingImage;001-3-4-1;grating over face;;;;;;;
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;4;RivalryGratingImage;001-3-4-2;immediate;NA;;no;NA;Mai 75;NA;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;4;RivalryGratingImage;001-3-4-3;face- one grating appears in background;NA;;yes;static;18.75;1.165;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;5;RivalryDotsImage;001-3-5-1;superimposed;;;;;;;
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;5;RivalryDotsImage;001-3-5-2;superimposed-face transparent;;;;;;;
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;6;RivalryDotsGrating;001-3-6-1;immediate;NA;;no;NA;3.875;NA;NA
+20;F;Matura;-2.75;-3.15;785.714;-0.24;Jan 96;0.03;01. Jun;s001;3;6;RivalryDotsGrating;001-3-6-2;superimposed- one gets dominant gradual;NA;;yes;dynamic;92.75;1.255;77.625
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;1;RivalryGratings;002-1-1-1;overlapping- change in transparency;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;1;RivalryGratings;002-1-1-2;travels from one side ?;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;2;RivalryImages;002-1-2-1;half;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;2;RivalryImages;002-1-2-2;travels from one side ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;2;RivalryImages;002-1-2-3;dominant;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;3;RivalryDots;002-1-3-1;circular motin: out- to in-motion;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;3;RivalryDots;002-1-3-2;quick & in- to out-motion;NA;;no;NA;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;4;RivalryGratingImage;002-1-4-1;both - partially ?;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;4;RivalryGratingImage;002-1-4-2;same but different direction;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;4;RivalryGratingImage;002-1-4-3;at middle face;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;5;RivalryDotsImage;002-1-5-1;at middle face;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;5;RivalryDotsImage;002-1-5-2;overlapping ? dynamically;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;6;RivalryDotsGrating;002-1-6-1;travels from one side ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;6;RivalryDotsGrating;002-1-6-2;overlapping- change in transparency;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;1;6;RivalryDotsGrating;002-1-6-3;sudden swap;NA;;no;NA;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;1;RivalryGratings;002-2-1-1;half;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;1;RivalryGratings;002-2-1-2;travels from one side ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;1;RivalryGratings;002-2-1-3;flip;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;1;RivalryGratings;002-2-1-4;overlapping like worms;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;1;RivalryGratings;002-2-1-5;overlapping- change in transparency;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;2;RivalryImages;002-2-2-1;half;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;2;RivalryImages;002-2-2-2;overlapping- change in transparency;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;3;RivalryDots;002-2-3-1;chaos - static;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;4;RivalryGratingImage;002-2-4-1;travels from one side ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;5;RivalryDotsImage;002-2-5-1;travels from one side ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;5;RivalryDotsImage;002-2-5-2;overlapping ? Dynamically;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;6;RivalryDotsGrating;002-2-6-1;travels from one side ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;2;6;RivalryDotsGrating;002-2-6-2;travels from other side ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;1;RivalryGratings;002-3-1-1;slowly changed into the following percept;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;1;RivalryGratings;002-3-1-2;slowly changed into transition;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;1;RivalryGratings;002-3-1-3;quick;NA;;yes;static;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;2;RivalryImages;002-3-2-1;ovelapping;NA;;yes;static;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;3;RivalryDots;002-3-3-1;clowly changed direction;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;3;RivalryDots;002-3-3-2;fast;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;3;RivalryDots;002-3-3-3;pause;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;4;RivalryGratingImage;002-3-4-1;quick  ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;5;RivalryDotsImage;002-3-5-1;slow & overlapping;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;5;RivalryDotsImage;002-3-5-2;swapping;NA;;yes;static;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;6;RivalryDotsGrating;002-3-6-1;slow ;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;6;RivalryDotsGrating;002-3-6-2;fast;NA;;yes;dynamic;NA;NA;NA
+36;M;Master;0;0;806.452;-0.05;NA;-0.07;NA;s002;3;6;RivalryDotsGrating;002-3-6-3;dominant dots;NA;;yes;dynamic;NA;NA;NA
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;1;RivalryGratings;003-1-1-1;grid pattern;NA;;yes;dynamic;100;1.085.714.286;5.428.571.429
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;2;RivalryImages;003-1-2-1;travels from one side ;NA;;yes;dynamic;100;1;7.142.857.143
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;3;RivalryDots;003-1-3-1;immediate;NA;;no;NaN;3.571.428.571;NA;NA
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;3;RivalryDots;003-1-3-2;random;NA;;yes;dynamic;2.914.285.714;1.137.142.857;58
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;3;RivalryDots;003-1-3-3;some in-;NA;;yes;dynamic;2.971.428.571;1.045.714.286;4.942.857.143
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;4;RivalryGratingImage;003-1-4-1;travels from one side ;NA;;yes;dynamic;100;1.142.857.143;6.285.714.286
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;5;RivalryDotsImage;003-1-5-1;dis/appear at different parts;NA;;yes;dynamic;100;1.668.571.429;80
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;6;RivalryDotsGrating;003-1-6-1;travels from one side ;NA;;yes;dynamic;50;1.285.714.286;6.314.285.714
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;1;6;RivalryDotsGrating;003-1-6-2;overlapping- change in transparency;NA;;yes;dynamic;4.971.428.571;0.857142857;3.342.857.143
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;1;RivalryGratings;003-2-1-1;half;NA;;yes;dynamic;57;Jan 23;57.125
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;1;RivalryGratings;003-2-1-2;overlapping;NA;;yes;dynamic;34.5;1.205;55
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;2;RivalryImages;003-2-2-1;travels from one side ;NA;;yes;dynamic;90.75;1.985;82.625
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;2;RivalryImages;003-2-2-2;very quick;NA;;yes;dynamic;Jul 25;0.505;19.125
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;3;RivalryDots;003-2-3-1;both at the same time;NA;;yes;dynamic;86.75;19.125;50.125
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;3;RivalryDots;003-2-3-2;immediate;NA;;no;NA;21;NA;NA
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;4;RivalryGratingImage;003-2-4-1;partially overlapping;NA;;yes;dynamic;75.125;15.025;50.75
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;4;RivalryGratingImage;003-2-4-2;travels from one side ;NA;;yes;dynamic;26;11.875;50
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;5;RivalryDotsImage;003-2-5-1;partially dis/appears - eyes!;NA;;yes;dynamic;87.125;0.73;54.125
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;5;RivalryDotsImage;003-2-5-2;fade in/out;NA;;yes;dynamic;14.875;0.35;25.25
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;2;6;RivalryDotsGrating;003-2-6-1;flowing out dots & grating at behind;NA;;NaN;NaN;NA;NA;NA
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;1;RivalryGratings;003-3-1-1;overlapping;NA;;yes;static;50.25;0.77;NA
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;1;RivalryGratings;003-3-1-2;fade in/out;NA;;yes;dynamic;49;1;52
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;2;RivalryImages;003-3-2-1;overlapping;NA;;yes;static;51;0.9125;NA
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;2;RivalryImages;003-3-2-2;fade in/out;NA;;yes;dynamic;50;1.235;56.375
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;3;RivalryDots;003-3-3-1;immediate;NA;;no;NA;20.125;NA;NA
+"25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;3;RivalryDots;003-3-3-2;""""""noise"""" on a """"static"""" pattern"";NA;;yes;dynamic;84.125;Jan 63;70.75"
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;4;RivalryGratingImage;003-3-4-2;overlapping;NA;;yes;static;50.625;12.525;NA
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;4;RivalryGratingImage;003-3-4-3;fade in/out;NA;;yes;dynamic;50.375;1.055;50.5
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;5;RivalryDotsImage;003-3-5-2;overlapping;NA;;yes;static;50.5;0.6725;NA
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;5;RivalryDotsImage;003-3-5-3;fade in/out;NA;;yes;dynamic;49.625;0.88;46.625
+25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;6;RivalryDotsGrating;003-3-6-1;ovelapping;NA;;yes;static;50.5;0.2975;NA
+"25;M;Bachelor;0;0;93.75;-0.11;Jan 45;-0.2;Jan 77;s003;3;6;RivalryDotsGrating;003-3-6-2;""""""fade away"""""";NA;;yes;dynamic;49.625;0.995;55.625"
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;1;RivalryGratings;005-1-1-1;V shape;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;1;RivalryGratings;005-1-1-2;X shape;NA;;yes;static;38;0.605714286;NA
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;2;RivalryImages;005-1-2-1;face dominant;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;2;RivalryImages;005-1-2-2;face dominant;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;3;RivalryDots;005-1-3-1;half;NA;;yes;dynamic;4.371.428.571;1.257.142.857;50
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;3;RivalryDots;005-1-3-2;half;NA;;yes;dynamic;5.542.857.143;0.742857143;50
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;4;RivalryGratingImage;005-1-4-1;curtain (bottom right);NA;;yes;dynamic;14;0.634285714;5.057.142.857
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;4;RivalryGratingImage;005-1-4-2;curtain (top left);NA;;yes;dynamic;5.742.857.143;0.874285714;4.971.428.571
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;5;RivalryDotsImage;005-1-5-1;superimposed;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;6;RivalryDotsGrating;005-1-6-1;superimposed;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;1;6;RivalryDotsGrating;005-1-6-2;immediate;;;yes;dynamic;1.028.571.429;0.794285714;0.285714286
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;1;RivalryGratings;005-2-1-1;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;1;RivalryGratings;005-2-1-2;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;1;RivalryGratings;005-2-1-3;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;1;RivalryGratings;005-2-1-4;immediate;NA;;yes;dynamic;36.75;14.925;Mai 75
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;1;RivalryGratings;005-2-1-5;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;2;RivalryImages;005-2-2-1;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;2;RivalryImages;005-2-2-2;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;2;RivalryImages;005-2-2-3;immediate;NA;;no;NA;23. Mai;NA;NA
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;3;RivalryDots;005-2-3-1;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;3;RivalryDots;005-2-3-2;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;3;RivalryDots;005-2-3-3;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;3;RivalryDots;005-2-3-4;immediate;NA;;yes;dynamic;21.375;0.495;63.625
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;4;RivalryGratingImage;005-2-4-1;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;4;RivalryGratingImage;005-2-4-2;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;4;RivalryGratingImage;005-2-4-3;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;4;RivalryGratingImage;005-2-4-4;immediate;NA;;yes;dynamic;45;0.8775;75.5
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;5;RivalryDotsImage;005-2-5-1;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;5;RivalryDotsImage;005-2-5-2;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;5;RivalryDotsImage;005-2-5-3;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;6;RivalryDotsGrating;005-2-6-1;immediate;NA;;yes;dynamic;36.875;0.64;62
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;2;6;RivalryDotsGrating;005-2-6-2;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;1;RivalryGratings;005-3-1-1;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;1;RivalryGratings;005-3-1-2;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;1;RivalryGratings;005-3-1-3;immediate;NA;;yes;static;16.375;0.7375;NA
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;2;RivalryImages;005-3-2-1;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;2;RivalryImages;005-3-2-2;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;2;RivalryImages;005-3-2-3;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;2;RivalryImages;005-3-2-4;immediate;NA;;yes;dynamic;Dez 75;0.655;97.5
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;3;RivalryDots;005-3-3-1;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;3;RivalryDots;005-3-3-2;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;3;RivalryDots;005-3-3-3;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;4;RivalryGratingImage;005-3-4-1;immediate;NA;;yes;dynamic;60.25;1.195;70.5
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;4;RivalryGratingImage;005-3-4-2;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;4;RivalryGratingImage;005-3-4-3;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;5;RivalryDotsImage;005-3-5-1;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;5;RivalryDotsImage;005-3-5-2;immediate;NA;;yes;dynamic;40.875;0.955;1.375
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;5;RivalryDotsImage;005-3-5-3;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;5;RivalryDotsImage;005-3-5-4;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;6;RivalryDotsGrating;005-3-6-1;grating-eyes first;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;6;RivalryDotsGrating;005-3-6-2;immediate;NA;;yes;dynamic;38.375;01. Feb;01. Mai
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;6;RivalryDotsGrating;005-3-6-3;static full face;;;;;;;
+28;M;Matura;-0.5;-3.5;100;-0.17;Jan 65;-0.09;Jan 37;s005;3;6;RivalryDotsGrating;005-3-6-4;static full face;;;;;;;
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;1;RivalryGratings;006-1-1-1;overlapped starting from center  ;NA;;yes;dynamic;42.75;0.6575;63.375
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;1;RivalryGratings;006-1-1-2;overlapping but half-like;NA;;yes;dynamic;54.25;11.025;37.5
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;2;RivalryImages;006-1-2-1;overlapped (not 50-50);NA;;yes;static;90.875;1.525;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;2;RivalryImages;006-1-2-2;partially dis/appears - different parts time to time;NA;;yes;dynamic;14.625;0.71;74.75
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;3;RivalryDots;006-1-3-1;random - only black dots;NA;;yes;dynamic;13.75;0.1225;09. Mai
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;3;RivalryDots;006-1-3-2;disappeared & bumped out;NA;;yes;dynamic;10.625;0.1;9
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;3;RivalryDots;006-1-3-3;random or both motion ?;NA;;yes;dynamic;93.75;10.575;46.125
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;4;RivalryGratingImage;006-1-4-1;partially dis/appears ;NA;;yes;static;95.125;Jan 45;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;5;RivalryDotsImage;006-1-5-1;partially dis/appears - different parts time to time;NA;;yes;dynamic;79.75;15.175;78.625
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;5;RivalryDotsImage;006-1-5-2;moving dots & eye;NA;;yes;static;53.25;0.885;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;1;6;RivalryDotsGrating;006-1-6-1;starting from center & appeared at two sides of central stripe;NA;;yes;dynamic;98.875;0.7825;75.25
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;1;RivalryGratings;006-2-1-1;immediate;NA;;no;NA;76.25;NA;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;1;RivalryGratings;006-2-1-2;overlapped starting from center  ;NA;;yes;static;78;01. Jun;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;2;RivalryImages;006-2-2-1;immediate;NA;;yes;static;65.25;14.075;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;2;RivalryImages;006-2-2-2;travels from one side ;NA;;yes;dynamic;21;0.765;74.625
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;2;RivalryImages;006-2-2-3;starting from eyes to whole face / other way around;NA;;yes;dynamic;16.875;0.6075;32.875
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;3;RivalryDots;006-2-3-1;random;NA;;yes;dynamic;78.375;15.975;43.5
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;3;RivalryDots;006-2-3-2;half;NA;;yes;dynamic;82.625;0.515;36.25
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;4;RivalryGratingImage;006-2-4-1;starting from eyes to whole face / other way around;NA;;yes;dynamic;45;0.425;56.625
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;4;RivalryGratingImage;006-2-4-2;overlapping;NA;;yes;static;55;Jan 25;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;5;RivalryDotsImage;006-2-5-1;immediate;NA;;no;NA;13;NA;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;5;RivalryDotsImage;006-2-5-2;travels from one side ;NA;;yes;dynamic;77.625;1.415;50.75
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;5;RivalryDotsImage;006-2-5-3;transition with eyes;NA;;yes;static;10;0.5775;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;6;RivalryDotsGrating;006-2-6-1;overlapped starting from center  ;NA;;yes;dynamic;54.75;1.255;64.25
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;2;6;RivalryDotsGrating;006-2-6-2;immediate;NA;;no;NA;32.125;NA;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;1;RivalryGratings;006-3-1-1;ovelapping;NA;;yes;static;50.25;Jan 27;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;1;RivalryGratings;006-3-1-2;overlapping- change in transparency;NA;;yes;dynamic;50.125;11.925;57.875
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;2;RivalryImages;006-3-2-1;immediate;NA;;no;NA;24. Mai;NA;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;2;RivalryImages;006-3-2-2;overlapping;NA;;yes;static;54.375;14.625;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;2;RivalryImages;006-3-2-3;overlapping- change in transparency;NA;;yes;dynamic;24. Mai;10.425;75
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;3;RivalryDots;006-3-3-1;immediate;;;no;NA;40.875;NA;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;3;RivalryDots;006-3-3-2;random dots;;;yes;dynamic;60.75;01. Jan;Dez 25
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;4;RivalryGratingImage;006-3-4-1;ovelapping;NA;;yes;static;70.125;14.925;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;4;RivalryGratingImage;006-3-4-2;overlapping- change in transparency;NA;;yes;dynamic;25.25;0.915;86.25
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;5;RivalryDotsImage;006-3-5-1;immediate;NA;;no;NA;08. Mai;NA;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;5;RivalryDotsImage;006-3-5-2;overlapping;NA;;yes;static;50.75;01. Nov;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;5;RivalryDotsImage;006-3-5-3;overlapping- change in transparency;NA;;no;NA;38;NA;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;6;RivalryDotsGrating;006-3-6-1;immediate;NA;;no;NA;25.25;NA;NA
+26;F;Master;0;0;851.852;-0.31;2;-0.02;Jan 18;s006;3;6;RivalryDotsGrating;006-3-6-2;ovelapping;NA;;yes;dynamic;75;11.975;39.625
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;1;RivalryGratings;007-1-1-1;ovelapping;NA;;yes;static;63.375;01. Mai;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;1;RivalryGratings;007-1-1-2;half;NA;;yes;static;07. Mai;0.5075;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;1;RivalryGratings;007-1-1-3;immediate;;;no;NA;25.375;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;2;RivalryImages;007-1-2-1;appearing from inside;NA;;yes;dynamic;52.375;18.475;81.5
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;2;RivalryImages;007-1-2-2;travels by starting as halves;NA;;yes;dynamic;24.875;0.5275;46
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;2;RivalryImages;007-1-2-3;quick change;NA;;no;NA;58;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;3;RivalryDots;007-1-3-1;like a river - half;NA;;yes;static;24.375;0.5025;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;3;RivalryDots;007-1-3-2;chaotic;NA;;yes;dynamic;50;11.275;75.625
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;3;RivalryDots;007-1-3-3;instant;NA;;no;NA;37;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;4;RivalryGratingImage;007-1-4-1;very random (parts of images);NA;;yes;static;15. Mai;11.525;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;4;RivalryGratingImage;007-1-4-2;instant;NA;;no;NA;50;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;4;RivalryGratingImage;007-1-4-3;travels by starting as halves;NA;;yes;dynamic;24.75;0.75;75.75
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;4;RivalryGratingImage;007-1-4-4;appearing from inside;NA;;yes;dynamic;36;0.2175;15
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;5;RivalryDotsImage;007-1-5-1;appearing from inside;NA;;yes;dynamic;28. Mai;0.19;61.875
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;5;RivalryDotsImage;007-1-5-2;curtain;NA;;yes;dynamic;42.875;0.805;50.25
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;5;RivalryDotsImage;007-1-5-3;random pieces;NA;;yes;dynamic;25.375;15.025;75.875
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;5;RivalryDotsImage;007-1-5-4;instant;NA;;no;NA;34.25;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;6;RivalryDotsGrating;007-1-6-1;travels from one side ;NA;;yes;dynamic;Okt 75;1.815;43.25
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;6;RivalryDotsGrating;007-1-6-2;partially appearing / mixture;NA;;yes;dynamic;73.75;0.995;75.375
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;1;6;RivalryDotsGrating;007-1-6-3;instant;NA;;no;NA;93.25;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;1;RivalryGratings;007-2-1-1;overlapping;NA;;yes;static;64.25;Jan 29;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;1;RivalryGratings;007-2-1-2;halves;NA;;yes;static;13.375;0.655;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;1;RivalryGratings;007-2-1-3;halves;NA;;yes;static;Mrz 25;0.125;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;1;RivalryGratings;007-2-1-4;travels by starting as halves;NA;;yes;dynamic;13.875;0.73;25. Mai
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;1;RivalryGratings;007-2-1-5;instant;NA;;no;NA;Jun 75;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;2;RivalryImages;007-2-2-1;travels by starting as halves;NA;;yes;dynamic;37.375;0.9975;56.25
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;2;RivalryImages;007-2-2-2;travels by starting as halves;NA;;yes;dynamic;38.5;Jan 24;65.75
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;2;RivalryImages;007-2-2-3;instant;NA;;no;NA;50;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;2;RivalryImages;007-2-2-4;ovelapping;NA;;yes;static;32.25;0.1575;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;3;RivalryDots;007-2-3-1;instant;NA;;no;NA;25.125;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;3;RivalryDots;007-2-3-2;chaotic;NA;;yes;dynamic;74.75;0.96;76.25
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;4;RivalryGratingImage;007-2-4-1;travels from one side ;NA;;yes;dynamic;38;10.875;65.75
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;4;RivalryGratingImage;007-2-4-2;travels from one side ;NA;;yes;dynamic;38.375;0.915;54.375
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;4;RivalryGratingImage;007-2-4-3;face at middle;NA;;yes;static;13.375;0.2525;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;4;RivalryGratingImage;007-2-4-4;appearing from inside;NA;;yes;dynamic;23.625;0.7525;62.75
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;4;RivalryGratingImage;007-2-4-5;instant;NA;;no;NA;5.375;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;5;RivalryDotsImage;007-2-5-1;apapearing from inside;NA;;yes;dynamic;50.375;0.7425;64
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;5;RivalryDotsImage;007-2-5-2;travels by starting as halves;NA;;yes;dynamic;25.125;0.2525;54.875
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;5;RivalryDotsImage;007-2-5-3;face at middle;NA;;yes;static;11.625;0.1975;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;5;RivalryDotsImage;007-2-5-4;instant;NA;;no;NA;9.875;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;6;RivalryDotsGrating;007-2-6-1;appearing from inside;NA;;yes;dynamic;11.875;0.14;50
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;6;RivalryDotsGrating;007-2-6-2;travels from one side ;NA;;yes;dynamic;63.625;0.9125;63.625
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;6;RivalryDotsGrating;007-2-6-3;mixed image;NA;;yes;static;25;0.405;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;2;6;RivalryDotsGrating;007-2-6-4;instant;NA;;no;NA;Apr 25;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;1;RivalryGratings;007-3-1-1;travels by starting as halves;NA;;yes;dynamic;25.25;01. Apr;50.75
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;1;RivalryGratings;007-3-1-2;overlapping;NA;;yes;static;37.75;11.525;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;1;RivalryGratings;007-3-1-3;immediate;;;no;NA;51.125;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;2;RivalryImages;007-3-2-1;ovelapping;NA;;yes;static;75.125;01. Mai;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;2;RivalryImages;007-3-2-2;appearing from inside;NA;;yes;dynamic;4.875;0.065;44.875
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;2;RivalryImages;007-3-2-3;instant;NA;;no;NA;18.25;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;3;RivalryDots;007-3-3-1;chaotic;NA;;yes;static;73.875;15.125;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;3;RivalryDots;007-3-3-2;halves;NA;;yes;static;13.375;0.75;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;3;RivalryDots;007-3-3-3;instant;NA;;no;NA;16.75;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;4;RivalryGratingImage;007-3-4-1;travels from one side ;NA;;yes;dynamic;25;0.8925;38.625
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;4;RivalryGratingImage;007-3-4-2;travels from other side ;NA;;yes;dynamic;24.75;0.74;50.375
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;4;RivalryGratingImage;007-3-4-3;overlapping;NA;;yes;static;38.25;10.675;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;4;RivalryGratingImage;007-3-4-4;instant;NA;;no;NA;13.125;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;5;RivalryDotsImage;007-3-5-1;appearing from outside;NA;;yes;dynamic;25;0.7525;46
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;5;RivalryDotsImage;007-3-5-2;ovelapping;NA;;yes;static;63.625;1.515;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;5;RivalryDotsImage;007-3-5-3;instant;NA;;no;NA;13;NA;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;6;RivalryDotsGrating;007-3-6-1;starting from center & appeared at two sides of central stripe;NA;;yes;dynamic;12. Mai;0.6875;49.75
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;6;RivalryDotsGrating;007-3-6-2;ovelapping;NA;;yes;static;62.75;Jan 51;NA
+23;M;Berufsbildende Mittlere Schule;-2;-1.5;100;-0.08;Jan 36;-0.12;Jan 49;s007;3;6;RivalryDotsGrating;007-3-6-3;instant;NA;;no;NA;Dez 75;NA;NA

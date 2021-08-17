@@ -3,7 +3,12 @@
 # ---------------------------------------------------------------------------- #
 
 # While developing the code, easy start:
-# data <- transrivalry::read_csv_data('/Users/yilmaz/Documents/R/transrivalry/tests/questionnaire_categories.csv')
+# subj_list <- c('s001','s002','s003','s005','s006','s007')
+# csv_path <- '/Users/yilmaz/Documents/R/transrivalry/tests/data.csv'
+# mat_folder <- '/Users/yilmaz/Documents/R/transrivalry/tests'
+# basename <- 'assessments_'
+# combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after_basename)
+# data <- transrivalry::read_csv_data(csv_path)
 # data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
 # data <- transrivalry::predefine_immediate(data,0)
 
@@ -47,11 +52,9 @@ median_transition <- function(data){
   mad_speed <- stats::aggregate(x=data[,'speed'],
                                 by=list(data[,'category_code']),
                                 FUN=mad, na.rm = TRUE)
-  N <- data %>%
-    group_by(category_code) %>%
-    summarise(number = n())
+  N <- table(data$category_code)
   meds <- cbind(med_frequency, mad_frequency[,2],
-                med_duration[,2], mad_duration[,2], med_speed[,2], mad_speed[,2],N[,2])
+                med_duration[,2], mad_duration[,2], med_speed[,2], mad_speed[,2],N)
   colnames(meds) <- c('category_code','median_frequency', 'mad_f',
                       'median_duration','mad_d','median_speed','mad_s','N')
   return(meds)
@@ -94,11 +97,9 @@ mean_transition <- function(data){
   std_speed <- stats::aggregate(x=data[,'speed'],
                                 by=list(data[,'category_code']),
                                 FUN=sd, na.rm = TRUE)
-  N <- data %>%
-    group_by(category_code) %>%
-    summarise(number = n())
+  N <- table(data$category_code)
   means <- cbind(mean_frequency, std_frequency[,2],
-                mean_duration[,2], std_duration[,2], mean_speed[,2], std_speed[,2], N[,2])
+                mean_duration[,2], std_duration[,2], mean_speed[,2], std_speed[,2], N)
   colnames(means) <- c('category_code','mean_frequency', 'std_f',
                       'mean_duration','std_d','mean_speed','std_s', 'N')
   return(means)
