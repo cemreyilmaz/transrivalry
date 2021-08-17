@@ -29,9 +29,18 @@ read_csv_data <- function(filelocation){
                                            'numeric','character','numeric','numeric','character',
                                            'character','character','character','character',
                                            'character','character','numeric','numeric','numeric'))
-  }, error = function(e){
-    warning('The file cannot be read!')
-    return(0)
+  }, error = function(e1){
+    tryCatch({
+      data <- utils::read.csv(filelocation, sep=';', dec='.',
+                              colClasses = c('numeric','character','character','numeric',
+                                             'numeric','numeric','numeric','numeric','numeric',
+                                             'numeric','character','numeric','numeric','character',
+                                             'character','character','character','character',
+                                             'character','character','numeric','numeric','numeric'))
+    }, error = function(e2){
+      warning('The file cannot be read!')
+      return(0)
+    })
   })
 }
 # ---------------------------------------------------------------------------- #

@@ -1,9 +1,9 @@
 # ---------------------------------------------------------------------------- #
 # Basic statistics after preprocessing
 # ---------------------------------------------------------------------------- #
-data <- transrivalry::read_csv_data('/Users/cemre/Documents/R/transrivalry/tests/questionnaire_categories.csv')
-data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
-data <- transrivalry::predefine_immediate(data,0)
+# data <- transrivalry::read_csv_data('/Users/cemre/Documents/R/transrivalry/tests/questionnaire_categories.csv')
+# data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
+# data <- transrivalry::predefine_immediate(data,0)
 
 #' Median of each transition parameter
 #'
