@@ -31,12 +31,17 @@ as paste0(subject_id,basename) if 0.}
 data.frame
 }
 \description{
-Combining the csv and mat data into csv file for the given subjects
+This function adds the demographic data and the quantitative data of
+transition questionnaire by using \link{combine_csv_mat} for every subject.
 }
 \note{
 It uses \link{combine_csv_mat} function.
+
+It does not change the file. If the file is wanted to be changed,
+    one must save the output as csv.
 }
 \examples{
 \dontrun{
-data <- combine_all_subjects(csv_path,mat_folder,subject_list,'assessments_',1)}
+data <- combine_all_subjects(csv_path,mat_folder,subject_list,'assessments_',1)
+write.csv(data, file = csv_path) # to save onto the csv file}
 }

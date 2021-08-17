@@ -28,7 +28,7 @@
 #'
 #' @export
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' read_csv_data('/Users/username/Documents/questionnaire.csv')}
 read_csv_data <- function(filelocation){

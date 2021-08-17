@@ -16,7 +16,8 @@ Imports: utils,
 Suggests: 
     knitr,
     rmarkdown,
-    roxygen2
+    roxygen2,
+    dplyr
 VignetteBuilder: knitr
 URL: https://github.com/cemreyilmaz/transriv
 BugReports: https://github.com/cemreyilmaz/transriv/issues

@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------- #
 
 # While developing the code, easy start:
-# data <- transrivalry::read_csv_data('/Users/cemre/Documents/R/transrivalry/tests/questionnaire_categories.csv')
+# data <- transrivalry::read_csv_data('/Users/yilmaz/Documents/R/transrivalry/tests/questionnaire_categories.csv')
 # data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
 # data <- transrivalry::predefine_immediate(data,0)
 
@@ -19,7 +19,6 @@
 #'     median absolute values.
 #'
 #' @importFrom stats aggregate
-#' @import dplyr
 #' @export
 #'
 #' @examples
@@ -67,7 +66,6 @@ median_transition <- function(data){
 #' @return data.frame -- It contains the mean values of each measure and their
 #'     standard deviation values.
 #' @importFrom stats aggregate
-#' @import dplyr
 #' @export
 #'
 #' @examples
@@ -109,7 +107,7 @@ mean_transition <- function(data){
 #' Descriptive statistics of transition parameters
 #'
 #' Before calculating the statistics, the category without a mixed percept is
-#' defined by using \link{transrivalry::predefine_immediate} function. Then, the
+#' defined by using \link{predefine_immediate} function. Then, the
 #' mean, standard deviation, median, median absolute deviation of frequency,
 #' duration and speed are calculated for every transition types.
 #'
