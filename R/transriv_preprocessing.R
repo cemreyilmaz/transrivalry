@@ -9,15 +9,18 @@
 #' @param filelocation char -- the path of the file including the filename and
 #'     extension. The file is assumed as csv file separated by tab and decimal
 #'     point is defined as '.'.
+#'
 #' @note The function warns with a message if the file doesn't exist or cannot
 #'     be read.
-#' @return data.frame
+#'
+#' @return data.frame -- the transition data
 #' @importFrom utils read.csv
+#'
 #' @export
 #'
-#' @examples
+#' @example
 #' \dontrun{
-#' read_csv_data('Users/username/Documents/questionnaire.csv')}
+#' read_csv_data('/Users/username/Documents/questionnaire.csv')}
 read_csv_data <- function(filelocation){
   tryCatch({
     data <- utils::read.csv(filelocation, sep=',', dec='.',
@@ -26,11 +29,6 @@ read_csv_data <- function(filelocation){
                                            'numeric','character','numeric','numeric','character',
                                            'character','character','character','character',
                                            'character','character','numeric','numeric','numeric'))
-    # age	sex	education	diopter_right
-    # diopter_left	handedness	logMAR_both	logMAR_right	logMAR_left
-    # stereoacuity  subject_id	session_code	run_code	run_name
-    # cat_id	notes	category-code category-name
-    #	mixed_percept	dynamism	frequency	duration	speed
   }, error = function(e){
     warning('The file cannot be read!')
     return(0)

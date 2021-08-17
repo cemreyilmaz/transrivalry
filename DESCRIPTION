@@ -15,7 +15,8 @@ Imports: utils,
     R.matlab
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    roxygen2
 VignetteBuilder: knitr
 URL: https://github.com/cemreyilmaz/transriv
 BugReports: https://github.com/cemreyilmaz/transriv/issues
