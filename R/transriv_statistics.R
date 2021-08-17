@@ -1,11 +1,17 @@
 # ---------------------------------------------------------------------------- #
 # Basic statistics after preprocessing
 # ---------------------------------------------------------------------------- #
+
+# While developing the code, easy start:
 # data <- transrivalry::read_csv_data('/Users/cemre/Documents/R/transrivalry/tests/questionnaire_categories.csv')
 # data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
 # data <- transrivalry::predefine_immediate(data,0)
 
+# ---------------------------------------------------------------------------- #
 #' Median of each transition parameter
+#'
+#' Median and median absolute deviation of frequency, duration and speed are
+#' calculated.
 #'
 #' @param data data.frame -- the preprocessed transition data
 #'
@@ -54,6 +60,8 @@ median_transition <- function(data){
 # ---------------------------------------------------------------------------- #
 #' Mean of each transition parameter
 #'
+#' Mean and standard deviation of frequency, duration and speed are calculated.
+#'
 #' @param data data.frame -- the preprocessed transition data
 #'
 #' @return data.frame -- It contains the mean values of each measure and their
@@ -101,7 +109,9 @@ mean_transition <- function(data){
 #' Descriptive statistics of transition parameters
 #'
 #' Before calculating the statistics, the category without a mixed percept is
-#' defined by using \link{transrivalry::predefine_immediate} function.
+#' defined by using \link{transrivalry::predefine_immediate} function. Then, the
+#' mean, standard deviation, median, median absolute deviation of frequency,
+#' duration and speed are calculated for every transition types.
 #'
 #' @param data data.frame -- preprocessed transition data
 #'
@@ -122,6 +132,10 @@ descriptive_transition <- function(data){
 }
 # ---------------------------------------------------------------------------- #
 #' Normalize frequency in each run
+#'
+#' This function divides each frequency value by the sum of frequencies in the
+#' corresponding run so that all the transition types have normalized and
+#' comparable relative frequencies.
 #'
 #' @param data data.frame -- preprocessed transition data
 #'
@@ -161,11 +175,11 @@ normalize_frequency <- function(data){
 # ---------------------------------------------------------------------------- #
 #' Convert the speed values
 #'
-#' The speed parameter was collected in a wrong way during the experiment. The
-#' maximum speed was recorded as 0 and the minimum was 100 by mistake. This
+#' The speed parameter was collected in just an opposite way during the
+#' experiment. The maximum speed was recorded as 0 and the minimum was 100. This
 #' function corrects the speed values.
 #'
-#' @param data data.frame -- preprocessed trransition data
+#' @param data data.frame -- preprocessed transition data
 #'
 #' @return data.frame -- transition data with corrected speed values
 #' @export
