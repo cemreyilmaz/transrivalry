@@ -6,9 +6,19 @@
 # ---------------------------------------------------------------------------- #
 #' Reading the csv file containing the questionnaire data
 #'
+#' This functions reads the csv file containing all the questionnaire data.
+#'
+#' This csv file is created by the manual examination of each questionnaire.
+#' During this process, the transition appearances are categorized by content
+#' analysis for the drawings and description text drawn and written by the
+#' participants.
+#'
+#' The demographics and the quantitative data of the questionnaire are added
+#' later by the function \link{combine_csv_mat}.
+#'
 #' @param filelocation char -- the path of the file including the filename and
-#'     extension. The file is assumed as csv file separated by tab and decimal
-#'     point is defined as '.'.
+#'     extension. The file is assumed as csv file separated by comma ',' or
+#'     semicomma ';' and decimal point is defined as '.'.
 #'
 #' @note The function warns with a message if the file doesn't exist or cannot
 #'     be read.
@@ -44,9 +54,14 @@ read_csv_data <- function(filelocation){
   })
 }
 # ---------------------------------------------------------------------------- #
-#' Reading the mat file containing the questionnaire data of individual subject
+#' Reading the mat file containing the questionnaire data and demographics
 #'
-#' @param filelocation char -- the path of the file including the filename and
+#' This functions reads the mat files created in matlab. The mat files include
+#' the demographic data which is collected on a survey and the quantitative data
+#' of the transition questionnaire. Those data are combined on matlab and saved
+#' as one mat file per subject.
+#'
+#' @param filelocation char -- the path of the file including the file name and
 #'     extension. The file is created on matlab and includes the questionnaires
 #'     for each run and the demographic info about the subject.
 #' @note The function warns with a message if the file doesn't exist or cannot
@@ -90,16 +105,22 @@ read_mat_data <- function(filelocation){
 # ---------------------------------------------------------------------------- #
 #' Combining the csv and mat data into csv file
 #'
+#' The demographic data and the quantitative data of questionnaire are added
+#' into the data stored in csv file.
+#'
 #' @param csv_path character -- the fullpath of csv file
 #' @param mat_path character -- the fullpath of mat file
 #' @note This function uses \link{read_csv_data} and \link{read_mat_data}
 #'     functions while reading the files.
+#' @note It does not change the file. If the file is wanted to be changed,
+#'     one must save the output as csv.
 #' @return data.frame
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' combine_csv_mat(csv_path,mat_path)}
+#' data <- combine_csv_mat(csv_path,mat_path)
+#' write.csv(data, file = csv_path) # to save onto the csv file}
 combine_csv_mat <- function(csv_path,mat_path){
   # read csv file
   data <- read_csv_data(csv_path)
@@ -155,6 +176,9 @@ combine_csv_mat <- function(csv_path,mat_path){
 # ---------------------------------------------------------------------------- #
 #' Combining the csv and mat data into csv file for the given subjects
 #'
+#' This function adds the demographic data and the quantitative data of
+#' transition questionnaire by using \link{combine_csv_mat} for every subject.
+#'
 #' @param csv_path character -- the fullpath of csv file
 #' @param mat_folder character -- the path of folder containing all the mat files
 #' @param subject_list character -- It can be an array containing all the
@@ -165,13 +189,16 @@ combine_csv_mat <- function(csv_path,mat_path){
 #'     as paste0(basename,subject_id) if 1 and
 #'     as paste0(subject_id,basename) if 0.
 #' @note It uses \link{combine_csv_mat} function.
+#' @note It does not change the file. If the file is wanted to be changed,
+#'     one must save the output as csv.
 #' @importFrom utils write.csv
 #' @return data.frame
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' data <- combine_all_subjects(csv_path,mat_folder,subject_list,'assessments_',1)}
+#' data <- combine_all_subjects(csv_path,mat_folder,subject_list,'assessments_',1)
+#' write.csv(data, file = csv_path) # to save onto the csv file}
 combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after_basename){
   if(missing(after_basename)){
     after_basename <- 1
@@ -191,17 +218,23 @@ combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after
 # ---------------------------------------------------------------------------- #
 #' Defining the category as immediate when there is no mixed percept
 #'
+#' This function defines the category of transition as 'immediate' with the
+#' category code 0 when the mixed percept is absent ('no' in mixed_percept
+#' column).
+#'
 #' @param data data.frame -- the output of preprocessing steps
 #' @param save_flag logical -- TRUE if you want to save the output as csv
 #' @param csv_path character -- where to write the output csv file
-#'
-#' @return data.frame -- same data dtructure with added 'immediate' categories
+#' @note If save_flag and csv_path variables are defined, the function saves the
+#'     output onto the csv file. If not, the output can be used only in the
+#'     current session as defined variable.
+#' @return data.frame -- same data structure with added 'immediate' categories
 #' @export
 #'
 #' @examples
 #' \dontrun{
 #' data <- predefine_immediate(data)
-#' predefine_immediate(data, 1, csv_path)}
+#' predefine_immediate(data, 1, csv_path) # to save onto the csv file}
 predefine_immediate <- function(data, save_flag, csv_path){
   if(missing(save_flag)){
     save_flag <- 0
