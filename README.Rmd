@@ -37,11 +37,11 @@ We need to reorganize the data and combine all the data saved in separate files.
 
 This is a basic example for preprocessing:
 
-```{r example}
+```{r prep}
 library(transrivalry)
-datafold <- paste(getwd(), '/tests', sep='')
-csv_path <- paste(datafold, '/data.csv',sep='')
-subject_list <- c('s001','s003','s005','s006','s007')
+datafold <- 'tests'
+csv_path <- 'tests/data.csv'
+subject_list <- c('s001','s002','s003','s005','s006','s007')
 basename <- 'assessments_'
 data <- combine_all_subjects(csv_path,datafold,subject_list,basename,1)
 ```
@@ -53,14 +53,14 @@ parameters including frequency, duration and speed. Descriptive stats can give
 a simple insight.
 
 This is a basic example for statistics:
-```{r example}
+```{r stats}
 library(transrivalry)
-datafold <- paste(getwd(), '/tests', sep='')
-csv_path <- paste(datafold, '/data.csv',sep='')
+datafold <- 'tests'
+csv_path <- 'tests/data.csv'
 subject_list <- c('s001','s003','s005','s006','s007')
 basename <- 'assessments_'
 data <- combine_all_subjects(csv_path,datafold,subject_list,basename,1)
-data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
+data['category_code'] <- rep(c(1,1,2,3,4),53)
 data <- normalize_data(data)
 all_stats <- descriptive_transition(data)
 ```
@@ -71,14 +71,14 @@ This package can also visualize the descriptives of transition data. We can plot
 each parameters separately across all transition types.
 
 This is a basic example for visualization:
-```{r example}
+```{r visualization}
 library(transrivalry)
-datafold <- paste(getwd(), '/tests', sep='')
-csv_path <- paste(datafold, '/data.csv',sep='')
+datafold <- 'tests'
+csv_path <- 'tests/data.csv'
 subject_list <- c('s001','s003','s005','s006','s007')
 basename <- 'assessments_'
 data <- combine_all_subjects(csv_path,datafold,subject_list,basename,1)
-data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
+data['category_code'] <- sample(c(1,2,3,4,5),265, replace = TRUE)
 data <- normalize_data(data)
 all_stats <- descriptive_transition(data)
 plot_stats(all_stats,'median','frequency')

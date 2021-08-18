@@ -210,7 +210,7 @@ combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after
     }else{
       filepath <- dir(mat_folder, full.names=T, pattern=paste0(curr_subject,basename))
     }
-    data <- combine_csv_mat(csv_path,filepath)
+    data <- suppressWarnings(combine_csv_mat(csv_path,filepath))
     utils::write.csv(data,csv_path,row.names = F)
   }
   return(data)

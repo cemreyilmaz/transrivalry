@@ -162,7 +162,7 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
     # title and labels
     ggplot2::labs(title=title_tex, x='Categories', y=y_tex) +
     # x-label positioning
-    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 60, vjust = 0.5, hjust=1))
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 30, vjust = 0.5, hjust=0))
   p
   return(p)
 }
