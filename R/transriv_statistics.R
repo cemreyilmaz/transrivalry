@@ -52,7 +52,7 @@ median_transition <- function(data){
   mad_speed <- stats::aggregate(x=data[,'speed'],
                                 by=list(data[,'category_code']),
                                 FUN=mad, na.rm = TRUE)
-  N <- table(data$category_code)
+  N <- array(as.numeric(table(data$category_code)), dim = nrow(table(data$category_code)))
   meds <- cbind(med_frequency, mad_frequency[,2],
                 med_duration[,2], mad_duration[,2], med_speed[,2], mad_speed[,2],N)
   colnames(meds) <- c('category_code','median_frequency', 'mad_f',
@@ -97,7 +97,7 @@ mean_transition <- function(data){
   std_speed <- stats::aggregate(x=data[,'speed'],
                                 by=list(data[,'category_code']),
                                 FUN=sd, na.rm = TRUE)
-  N <- table(data$category_code)
+  N <- array(as.numeric(table(data$category_code)), dim = nrow(table(data$category_code)))
   means <- cbind(mean_frequency, std_frequency[,2],
                 mean_duration[,2], std_duration[,2], mean_speed[,2], std_speed[,2], N)
   colnames(means) <- c('category_code','mean_frequency', 'std_f',
