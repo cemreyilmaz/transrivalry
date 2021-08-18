@@ -31,16 +31,55 @@ You can install the released version of transrivalry from [CRAN](https://CRAN.R-
 install.packages("transrivalry")
 ```
 
-## Example
+## Preprocessing
+
+We need to reorganize the data and combine all the data saved in separate files.
 
 This is a basic example for preprocessing:
 
 ```{r example}
 library(transrivalry)
 datafold <- paste(getwd(), '/tests', sep='')
-csv_path <- paste(datafold, '/questionnaire_categories.csv',sep='')
-subject_list <- c('s001','s003','s005')
+csv_path <- paste(datafold, '/data.csv',sep='')
+subject_list <- c('s001','s003','s005','s006','s007')
 basename <- 'assessments_'
 data <- combine_all_subjects(csv_path,datafold,subject_list,basename,1)
 ```
 
+## Descriptive statistics
+
+To understand the nature of different transition types, we can check the 
+parameters including frequency, duration and speed. Descriptive stats can give
+a simple insight.
+
+This is a basic example for statistics:
+```{r example}
+library(transrivalry)
+datafold <- paste(getwd(), '/tests', sep='')
+csv_path <- paste(datafold, '/data.csv',sep='')
+subject_list <- c('s001','s003','s005','s006','s007')
+basename <- 'assessments_'
+data <- combine_all_subjects(csv_path,datafold,subject_list,basename,1)
+data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
+data <- normalize_data(data)
+all_stats <- descriptive_transition(data)
+```
+
+## Visualization
+
+This package can also visualize the descriptives of transition data. We can plot
+each parameters separately across all transition types.
+
+This is a basic example for visualization:
+```{r example}
+library(transrivalry)
+datafold <- paste(getwd(), '/tests', sep='')
+csv_path <- paste(datafold, '/data.csv',sep='')
+subject_list <- c('s001','s003','s005','s006','s007')
+basename <- 'assessments_'
+data <- combine_all_subjects(csv_path,datafold,subject_list,basename,1)
+data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
+data <- normalize_data(data)
+all_stats <- descriptive_transition(data)
+plot_stats(all_stats,'median','frequency')
+```

@@ -24,6 +24,8 @@
 #'     median absolute values.
 #'
 #' @importFrom stats aggregate
+#' @importFrom stats mad
+#' @importFrom stats median
 #' @export
 #'
 #' @examples
@@ -69,6 +71,7 @@ median_transition <- function(data){
 #' @return data.frame -- It contains the mean values of each measure and their
 #'     standard deviation values.
 #' @importFrom stats aggregate
+#' @importFrom stats sd
 #' @export
 #'
 #' @examples

@@ -14,7 +14,7 @@ data.frame -- descriptive statistics (median, mad and mean, std)
 }
 \description{
 Before calculating the statistics, the category without a mixed percept is
-defined by using \link{transrivalry::predefine_immediate} function. Then, the
+defined by using \link{predefine_immediate} function. Then, the
 mean, standard deviation, median, median absolute deviation of frequency,
 duration and speed are calculated for every transition types.
 }
