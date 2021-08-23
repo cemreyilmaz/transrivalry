@@ -1,8 +1,8 @@
 ---
-title: "transriv_vignette"
+title: "transrivalry_vignette"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{transriv_vignette}
+  %\VignetteIndexEntry{transrivalry_vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -15,5 +15,5 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(transriv)
+library(transrivalry)
 ```
