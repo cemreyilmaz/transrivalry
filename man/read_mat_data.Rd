@@ -2,12 +2,12 @@
 % Please edit documentation in R/transriv_preprocessing.R
 \name{read_mat_data}
 \alias{read_mat_data}
-\title{Reading the mat file containing the questionnaire data of individual subject}
+\title{Reading the mat file containing the questionnaire data and demographics}
 \usage{
 read_mat_data(filelocation)
 }
 \arguments{
-\item{filelocation}{char -- the path of the file including the filename and
+\item{filelocation}{char -- the path of the file including the file name and
 extension. The file is created on matlab and includes the questionnaires
 for each run and the demographic info about the subject.}
 }
@@ -15,7 +15,10 @@ for each run and the demographic info about the subject.}
 list
 }
 \description{
-Reading the mat file containing the questionnaire data of individual subject
+This functions reads the mat files created in matlab. The mat files include
+the demographic data which is collected on a survey and the quantitative data
+of the transition questionnaire. Those data are combined on matlab and saved
+as one mat file per subject.
 }
 \note{
 The function warns with a message if the file doesn't exist or cannot

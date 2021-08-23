@@ -12,7 +12,8 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Imports: utils,
-    R.matlab
+    R.matlab,
+    ggplot2
 Suggests: 
     knitr,
     rmarkdown,

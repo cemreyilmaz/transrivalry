@@ -15,13 +15,18 @@ combine_csv_mat(csv_path, mat_path)
 data.frame
 }
 \description{
-Combining the csv and mat data into csv file
+The demographic data and the quantitative data of questionnaire are added
+into the data stored in csv file.
 }
 \note{
 This function uses \link{read_csv_data} and \link{read_mat_data}
     functions while reading the files.
+
+It does not change the file. If the file is wanted to be changed,
+    one must save the output as csv.
 }
 \examples{
 \dontrun{
-combine_csv_mat(csv_path,mat_path)}
+data <- combine_csv_mat(csv_path,mat_path)
+write.csv(data, file = csv_path) # to save onto the csv file}
 }

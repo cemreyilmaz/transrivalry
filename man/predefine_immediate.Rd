@@ -14,13 +14,20 @@ predefine_immediate(data, save_flag, csv_path)
 \item{csv_path}{character -- where to write the output csv file}
 }
 \value{
-data.frame -- same data dtructure with added 'immediate' categories
+data.frame -- same data structure with added 'immediate' categories
 }
 \description{
-Defining the category as immediate when there is no mixed percept
+This function defines the category of transition as 'immediate' with the
+category code 0 when the mixed percept is absent ('no' in mixed_percept
+column).
+}
+\note{
+If save_flag and csv_path variables are defined, the function saves the
+    output onto the csv file. If not, the output can be used only in the
+    current session as defined variable.
 }
 \examples{
 \dontrun{
 data <- predefine_immediate(data)
-predefine_immediate(data, 1, csv_path)}
+predefine_immediate(data, 1, csv_path) # to save onto the csv file}
 }

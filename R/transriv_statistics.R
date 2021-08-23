@@ -1,11 +1,22 @@
 # ---------------------------------------------------------------------------- #
 # Basic statistics after preprocessing
 # ---------------------------------------------------------------------------- #
-data <- transrivalry::read_csv_data('/Users/cemre/Documents/R/transrivalry/tests/questionnaire_categories.csv')
-data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
-data <- transrivalry::predefine_immediate(data,0)
 
+# While developing the code, easy start:
+# subj_list <- c('s001','s002','s003','s005','s006','s007')
+# csv_path <- '/Users/yilmaz/Documents/R/transrivalry/tests/data.csv'
+# mat_folder <- '/Users/yilmaz/Documents/R/transrivalry/tests'
+# basename <- 'assessments_'
+# combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after_basename)
+# data <- transrivalry::read_csv_data(csv_path)
+# data['category_code'] <- rep(c(1,1,1,2,2,2,3,3,4,5),79)
+# data <- transrivalry::predefine_immediate(data,0)
+
+# ---------------------------------------------------------------------------- #
 #' Median of each transition parameter
+#'
+#' Median and median absolute deviation of frequency, duration and speed are
+#' calculated.
 #'
 #' @param data data.frame -- the preprocessed transition data
 #'
@@ -13,7 +24,8 @@ data <- transrivalry::predefine_immediate(data,0)
 #'     median absolute values.
 #'
 #' @importFrom stats aggregate
-#' @import dplyr
+#' @importFrom stats mad
+#' @importFrom stats median
 #' @export
 #'
 #' @examples
@@ -42,11 +54,9 @@ median_transition <- function(data){
   mad_speed <- stats::aggregate(x=data[,'speed'],
                                 by=list(data[,'category_code']),
                                 FUN=mad, na.rm = TRUE)
-  N <- data %>%
-    group_by(category_code) %>%
-    summarise(number = n())
+  N <- array(as.numeric(table(data$category_code)), dim = nrow(table(data$category_code)))
   meds <- cbind(med_frequency, mad_frequency[,2],
-                med_duration[,2], mad_duration[,2], med_speed[,2], mad_speed[,2],N[,2])
+                med_duration[,2], mad_duration[,2], med_speed[,2], mad_speed[,2],N)
   colnames(meds) <- c('category_code','median_frequency', 'mad_f',
                       'median_duration','mad_d','median_speed','mad_s','N')
   return(meds)
@@ -54,12 +64,14 @@ median_transition <- function(data){
 # ---------------------------------------------------------------------------- #
 #' Mean of each transition parameter
 #'
+#' Mean and standard deviation of frequency, duration and speed are calculated.
+#'
 #' @param data data.frame -- the preprocessed transition data
 #'
 #' @return data.frame -- It contains the mean values of each measure and their
 #'     standard deviation values.
 #' @importFrom stats aggregate
-#' @import dplyr
+#' @importFrom stats sd
 #' @export
 #'
 #' @examples
@@ -88,11 +100,9 @@ mean_transition <- function(data){
   std_speed <- stats::aggregate(x=data[,'speed'],
                                 by=list(data[,'category_code']),
                                 FUN=sd, na.rm = TRUE)
-  N <- data %>%
-    group_by(category_code) %>%
-    summarise(number = n())
+  N <- array(as.numeric(table(data$category_code)), dim = nrow(table(data$category_code)))
   means <- cbind(mean_frequency, std_frequency[,2],
-                mean_duration[,2], std_duration[,2], mean_speed[,2], std_speed[,2], N[,2])
+                mean_duration[,2], std_duration[,2], mean_speed[,2], std_speed[,2], N)
   colnames(means) <- c('category_code','mean_frequency', 'std_f',
                       'mean_duration','std_d','mean_speed','std_s', 'N')
   return(means)
@@ -101,7 +111,9 @@ mean_transition <- function(data){
 #' Descriptive statistics of transition parameters
 #'
 #' Before calculating the statistics, the category without a mixed percept is
-#' defined by using \link{transrivalry::predefine_immediate} function.
+#' defined by using \link{predefine_immediate} function. Then, the
+#' mean, standard deviation, median, median absolute deviation of frequency,
+#' duration and speed are calculated for every transition types.
 #'
 #' @param data data.frame -- preprocessed transition data
 #'
@@ -122,6 +134,10 @@ descriptive_transition <- function(data){
 }
 # ---------------------------------------------------------------------------- #
 #' Normalize frequency in each run
+#'
+#' This function divides each frequency value by the sum of frequencies in the
+#' corresponding run so that all the transition types have normalized and
+#' comparable relative frequencies.
 #'
 #' @param data data.frame -- preprocessed transition data
 #'
@@ -161,11 +177,11 @@ normalize_frequency <- function(data){
 # ---------------------------------------------------------------------------- #
 #' Convert the speed values
 #'
-#' The speed parameter was collected in a wrong way during the experiment. The
-#' maximum speed was recorded as 0 and the minimum was 100 by mistake. This
+#' The speed parameter was collected in just an opposite way during the
+#' experiment. The maximum speed was recorded as 0 and the minimum was 100. This
 #' function corrects the speed values.
 #'
-#' @param data data.frame -- preprocessed trransition data
+#' @param data data.frame -- preprocessed transition data
 #'
 #' @return data.frame -- transition data with corrected speed values
 #' @export
