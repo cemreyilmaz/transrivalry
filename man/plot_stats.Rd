@@ -33,9 +33,9 @@ The error bars are drawn as given in the stat_data. The default of this
 package is standard deviation for mean and median absolute value for median.
 }
 \examples{
-{\dontrun{
+\dontrun{
 plot_stats(all_stats,'median','frequency')
 plot_stats(all_stats,'mean')
-}}
+}
 
 }

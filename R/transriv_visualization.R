@@ -23,10 +23,11 @@
 #' @import ggplot2
 #'
 #' @export
-#' @examples{\dontrun{
+#' @examples
+#' \dontrun{
 #' plot_stats(all_stats,'median','frequency')
 #' plot_stats(all_stats,'mean')
-#' }}
+#' }
 #'
 plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
   if(!missing(stat_val)){ # if defined, extract only median or mean
@@ -146,18 +147,18 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
     }
   }
   # create data frame with stat and error values
-  stat_data <- data.frame(stats = t(y_stats), errors = t(y_errors))
+  stat_data <- data.frame(stat_vals = t(y_stats), error_vals = t(y_errors))
   if(convert_na){ # if desired, na values can be changed into zeros
   stat_data[is.na(stat_data)] <- 0
   }
   # plot filtered data
   p <- ggplot2::ggplot(stat_data) +
     # first, mean/median
-    ggplot2::geom_point(ggplot2::aes(x=cat_names, y=stats),
+    ggplot2::geom_point(ggplot2::aes(x=cat_names, y=stat_vals),
                         size=1, colour='dimgray', stat='identity', alpha=.9) +
     # then, error bars
-    ggplot2::geom_errorbar(ggplot2::aes(x=cat_names, ymin=stats-errors,
-                                       ymax=stats+errors),
+    ggplot2::geom_errorbar(ggplot2::aes(x=cat_names, ymin=stat_vals-error_vals,
+                                       ymax=stat_vals+error_vals),
                            width=.2, colour='deepskyblue', alpha=.4, size=1.3) +
     # title and labels
     ggplot2::labs(title=title_tex, x='Categories', y=y_tex) +
