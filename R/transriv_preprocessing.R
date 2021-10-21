@@ -110,6 +110,7 @@ read_mat_data <- function(filelocation){
 #'
 #' @param csv_path character -- the fullpath of csv file
 #' @param mat_path character -- the fullpath of mat file
+#' @param data     data.frame -- transition data (optional)
 #' @note This function uses \link{read_csv_data} and \link{read_mat_data}
 #'     functions while reading the files.
 #' @note It does not change the file. If the file is wanted to be changed,
@@ -121,9 +122,11 @@ read_mat_data <- function(filelocation){
 #' \dontrun{
 #' data <- combine_csv_mat(csv_path,mat_path)
 #' write.csv(data, file = csv_path) # to save onto the csv file}
-combine_csv_mat <- function(csv_path,mat_path){
-  # read csv file
-  data <- read_csv_data(csv_path)
+combine_csv_mat <- function(csv_path,mat_path,data){
+  if(missing(data)){
+    # read csv file
+    data <- read_csv_data(csv_path)
+  }
   # read behavioral data of given subject
   curr_subj_quest <- read_mat_data(mat_path)
   # ---------- take the questionnaire ---------- #
