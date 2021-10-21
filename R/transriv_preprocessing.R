@@ -182,10 +182,12 @@ combine_csv_mat <- function(csv_path,mat_path,data){
 #' This function adds the demographic data and the quantitative data of
 #' transition questionnaire by using \link{combine_csv_mat} for every subject.
 #'
-#' @param csv_path character -- the fullpath of csv file
+#' @param csv_path character -- the fullpath of csv file. If you have a variable
+#'     holding the transition data, you don't have to define csv path.
 #' @param mat_folder character -- the path of folder containing all the mat files
 #' @param subject_list character -- It can be an array containing all the
-#'     subject ids such as c('s001','s002','s003')
+#'     subject ids such as c('s001','s002','s003'). By default, it is all the
+#'     subjects of mat files.
 #' @param basename character -- the basename of the mat files such as
 #'     'assessments_'
 #' @param after_basename logical -- The file name of mat file is created
@@ -203,15 +205,9 @@ combine_csv_mat <- function(csv_path,mat_path,data){
 #' \dontrun{
 #' data <- combine_all_subjects(csv_path,mat_folder,subject_list,'assessments_',1)
 #' write.csv(data, file = csv_path) # to save onto the csv file}
-combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after_basename,data){
+combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename = "assessments_",after_basename = 1,data){
   if(missing(subject_list)){
     subject_list <- substr(dir(mat_folder, full.names=T, pattern=".mat"),19,22)
-  }
-  if(missing(basename)){
-    basename <- "assessments_"
-  }
-  if(missing(after_basename)){
-    after_basename <- 1
   }
   for(s in 1:length(subject_list)){
     curr_subject <- subject_list[s]
