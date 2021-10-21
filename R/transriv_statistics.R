@@ -124,7 +124,6 @@ mean_transition <- function(data){
 #' \dontrun{
 #' all_stats <- descriptive_transition(data)}
 descriptive_transition <- function(data){
-  data <- predefine_immediate(data,0)
   meds <- median_transition(data)
   means <- mean_transition(data)
   all_stats <- rbind(t(meds[,2:(length(meds)-1)]),t(means[,2:length(means)]))
