@@ -46,8 +46,8 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
     a <- grep(trans_val, a, fixed = TRUE)
     a <- c(a, a+1)
     stat_data <- rbind(stat_data[a,], stat_data[dim(stat_data)[1],])
-  }else{ # if not defined, let's plot every parameter
-    trans_val <- 'all'
+  }else{ # if not defined, we cannot continue...
+    warning('Select a transition parameter!')
   }
   if(missing(cat_names)){ # if not defined, use the labels in csv file as category names
     cat_names <- colnames(stat_data)
@@ -56,48 +56,36 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
     convert_na <- 0
   }
   # prepare for plotting
-  y_stats <- stat_data[seq(1,(dim(stat_data)[1]-1),by=2),] # all stats
-  y_errors <- stat_data[seq(2,(dim(stat_data)[1]-1),by=2),] # all errors
+  y_stats <- stat_data[1:2,] # all stats
+  y_errors <- stat_data[3:4,] # all errors
   if(stat_val=='mean'){ # if mean
     if(trans_val=='frequency'){ # if frequency
       title_tex <- 'Mean Relative Frequency' # create title text
       y_tex <- 'Relative Frequency' # create y-label text
-      y_stats <- as.matrix(y_stats) # reorganize mean values
+      y_stats <- as.matrix(y_stats[1,]) # reorganize mean values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors) # reorganize error values
+      y_errors <- as.matrix(y_errors[1,]) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
     if(trans_val=='duration'){ # if duration
       title_tex <- 'Mean Duration' # create title text
       y_tex <- 'Duration (sec)' # create y-label text
-      y_stats <- as.matrix(y_stats) # reorganize mean values
+      y_stats <- as.matrix(y_stats[1,]) # reorganize mean values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors) # reorganize error values
+      y_errors <- as.matrix(y_errors[1,]) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
     if(trans_val=='speed'){ # if speed
       title_tex <- 'Mean Relative Speed' # create title text
       y_tex <- 'Relative Speed' # create y-label text
-      y_stats <- as.matrix(y_stats) # reorganize mean values
+      y_stats <- as.matrix(y_stats[1,]) # reorganize mean values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors) # reorganize error values
-      rownames(y_errors) <- NULL
-      colnames(y_errors) <- NULL
-    }
-    if(trans_val=='all'){ # if undefined parameter
-      title_tex <- 'Mean Parameters of Transition Types' # create title text
-      y_tex <- 'Mean Value' # create y-label text
-      # category names should be rearranged
-      cat_names <- c(paste0(cat_names, '_Frequency'),paste0(cat_names, '_Duration'),paste0(cat_names, '_Speed'))
-      y_stats <- as.matrix(cbind(y_stats[1,],y_stats[2,],y_stats[3,])) # reorganize mean values
-      rownames(y_stats) <- NULL
-      colnames(y_stats) <- NULL
-      y_errors <- as.matrix(cbind(y_errors[1,],y_errors[2,],y_errors[3,])) # reorganize error values
+      y_errors <- as.matrix(y_errors[1,]) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
@@ -106,42 +94,30 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
     if(trans_val=='frequency'){ # if frequency
       title_tex <- 'Median Relative Frequency' # create title text
       y_tex <- 'Relative Frequency' # create y-label text
-      y_stats <- as.matrix(y_stats) # reorganize median values
+      y_stats <- as.matrix(y_stats[2,]) # reorganize median values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors) # reorganize error values
+      y_errors <- as.matrix(y_errors[2,]) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
     if(trans_val=='duration'){ # if duration
       title_tex <- 'Median Duration' # create title text
       y_tex <- 'Duration (sec)' # create y-label text
-      y_stats <- as.matrix(y_stats) # reorganize median values
+      y_stats <- as.matrix(y_stats[2,]) # reorganize median values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors) # reorganize error values
+      y_errors <- as.matrix(y_errors[2,]) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
     if(trans_val=='speed'){
       title_tex <- 'Median Relative Speed' # create title text
       y_tex <- 'Relative Speed' # create y-label text
-      y_stats <- as.matrix(y_stats) # reorganize median values
+      y_stats <- as.matrix(y_stats[2,]) # reorganize median values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors) # reorganize error values
-      rownames(y_errors) <- NULL
-      colnames(y_errors) <- NULL
-    }
-    if(trans_val=='all'){
-      title_tex <- 'Median Parameters of Transition Types' # create title text
-      y_tex <- 'Median Value' # create y-label text
-      # category names should be rearranged
-      cat_names <- c(paste0(cat_names, '_Frequency'),paste0(cat_names, '_Duration'),paste0(cat_names, '_Speed'))
-      y_stats <- as.matrix(cbind(y_stats[1,],y_stats[2,],y_stats[3,])) # reorganize median values
-      rownames(y_stats) <- NULL
-      colnames(y_stats) <- NULL
-      y_errors <- as.matrix(cbind(y_errors[1,],y_errors[2,],y_errors[3,])) # reorganize error values
+      y_errors <- as.matrix(y_errors[2,]) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
@@ -163,7 +139,7 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
     # title and labels
     ggplot2::labs(title=title_tex, x='Categories', y=y_tex) +
     # x-label positioning
-    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 30, vjust = 0.5, hjust=0))
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=0))
   p
   return(p)
 }
