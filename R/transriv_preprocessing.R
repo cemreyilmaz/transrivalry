@@ -191,6 +191,7 @@ combine_csv_mat <- function(csv_path,mat_path,data){
 #' @param after_basename logical -- The file name of mat file is created
 #'     as paste0(basename,subject_id) if 1 and
 #'     as paste0(subject_id,basename) if 0.
+#' @data data.frame -- transition data (optional)
 #' @note It uses \link{combine_csv_mat} function.
 #' @note It does not change the file. If the file is wanted to be changed,
 #'     one must save the output as csv.
@@ -202,7 +203,7 @@ combine_csv_mat <- function(csv_path,mat_path,data){
 #' \dontrun{
 #' data <- combine_all_subjects(csv_path,mat_folder,subject_list,'assessments_',1)
 #' write.csv(data, file = csv_path) # to save onto the csv file}
-combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after_basename){
+combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after_basename,data){
   if(missing(after_basename)){
     after_basename <- 1
   }
@@ -213,8 +214,12 @@ combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after
     }else{
       filepath <- dir(mat_folder, full.names=T, pattern=paste0(curr_subject,basename))
     }
-    data <- suppressWarnings(combine_csv_mat(csv_path,filepath))
-    utils::write.csv(data,csv_path,row.names = F)
+    if(missing(data)){
+      data <- suppressWarnings(combine_csv_mat(csv_path,filepath))
+      utils::write.csv(data,csv_path,row.names = F)
+    } else{
+      data <- suppressWarnings(combine_csv_mat(csv_path,filepath,data))
+    }
   }
   return(data)
 }
