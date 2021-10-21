@@ -204,6 +204,12 @@ combine_csv_mat <- function(csv_path,mat_path,data){
 #' data <- combine_all_subjects(csv_path,mat_folder,subject_list,'assessments_',1)
 #' write.csv(data, file = csv_path) # to save onto the csv file}
 combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename,after_basename,data){
+  if(missing(subject_list)){
+    subject_list <- substr(dir(mat_folder, full.names=T, pattern=".mat"),19,22)
+  }
+  if(missing(basename)){
+    basename <- "assessments_"
+  }
   if(missing(after_basename)){
     after_basename <- 1
   }
