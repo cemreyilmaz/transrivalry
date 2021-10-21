@@ -56,36 +56,36 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
     convert_na <- 0
   }
   # prepare for plotting
-  y_stats <- stat_data[1:2,] # all stats
-  y_errors <- stat_data[3:4,] # all errors
+  y_stats <- stat_data[seq(1,(dim(stat_data)[1]-1),by=2),] # all stats
+  y_errors <- stat_data[seq(2,(dim(stat_data)[1]-1),by=2),] # all errors
   if(stat_val=='mean'){ # if mean
     if(trans_val=='frequency'){ # if frequency
       title_tex <- 'Mean Relative Frequency' # create title text
       y_tex <- 'Relative Frequency' # create y-label text
-      y_stats <- as.matrix(y_stats[1,]) # reorganize mean values
+      y_stats <- as.matrix(y_stats) # reorganize mean values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors[1,]) # reorganize error values
+      y_errors <- as.matrix(y_errors) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
     if(trans_val=='duration'){ # if duration
       title_tex <- 'Mean Duration' # create title text
       y_tex <- 'Duration (sec)' # create y-label text
-      y_stats <- as.matrix(y_stats[1,]) # reorganize mean values
+      y_stats <- as.matrix(y_stats) # reorganize mean values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors[1,]) # reorganize error values
+      y_errors <- as.matrix(y_errors) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
     if(trans_val=='speed'){ # if speed
       title_tex <- 'Mean Relative Speed' # create title text
       y_tex <- 'Relative Speed' # create y-label text
-      y_stats <- as.matrix(y_stats[1,]) # reorganize mean values
+      y_stats <- as.matrix(y_stats) # reorganize mean values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors[1,]) # reorganize error values
+      y_errors <- as.matrix(y_errors) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
@@ -94,30 +94,30 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
     if(trans_val=='frequency'){ # if frequency
       title_tex <- 'Median Relative Frequency' # create title text
       y_tex <- 'Relative Frequency' # create y-label text
-      y_stats <- as.matrix(y_stats[2,]) # reorganize median values
+      y_stats <- as.matrix(y_stats) # reorganize median values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors[2,]) # reorganize error values
+      y_errors <- as.matrix(y_errors) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
     if(trans_val=='duration'){ # if duration
       title_tex <- 'Median Duration' # create title text
       y_tex <- 'Duration (sec)' # create y-label text
-      y_stats <- as.matrix(y_stats[2,]) # reorganize median values
+      y_stats <- as.matrix(y_stats) # reorganize median values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors[2,]) # reorganize error values
+      y_errors <- as.matrix(y_errors) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
     if(trans_val=='speed'){
       title_tex <- 'Median Relative Speed' # create title text
       y_tex <- 'Relative Speed' # create y-label text
-      y_stats <- as.matrix(y_stats[2,]) # reorganize median values
+      y_stats <- as.matrix(y_stats) # reorganize median values
       rownames(y_stats) <- NULL
       colnames(y_stats) <- NULL
-      y_errors <- as.matrix(y_errors[2,]) # reorganize error values
+      y_errors <- as.matrix(y_errors) # reorganize error values
       rownames(y_errors) <- NULL
       colnames(y_errors) <- NULL
     }
