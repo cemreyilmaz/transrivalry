@@ -191,7 +191,7 @@ combine_csv_mat <- function(csv_path,mat_path,data){
 #' @param after_basename logical -- The file name of mat file is created
 #'     as paste0(basename,subject_id) if 1 and
 #'     as paste0(subject_id,basename) if 0.
-#' @data data.frame -- transition data (optional)
+#' @param data data.frame -- transition data (optional)
 #' @note It uses \link{combine_csv_mat} function.
 #' @note It does not change the file. If the file is wanted to be changed,
 #'     one must save the output as csv.
