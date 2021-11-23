@@ -37,22 +37,22 @@ median_transition <- function(data){
   data$dynamism[data$dynamism=='NaN']<-NA
   data$dynamism[data$dynamism=='dynamism']<-'dynamic'
   med_duration <- stats::aggregate(x=data[,'duration'],
-                           by=list(data[,'category_name']),
+                           by=list(data[,'category_code']),
                            FUN=median, na.rm = TRUE)
   mad_duration <- stats::aggregate(x=data[,'duration'],
-                                   by=list(data[,'category_name']),
+                                   by=list(data[,'category_code']),
                                    FUN=mad, na.rm = TRUE)
   med_frequency <- stats::aggregate(x=data[,'frequency'],
                            by=list(data[,'category_name']),
                            FUN=median, na.rm = TRUE)
   mad_frequency <- stats::aggregate(x=data[,'frequency'],
-                                    by=list(data[,'category_name']),
+                                    by=list(data[,'category_code']),
                                     FUN=mad, na.rm = TRUE)
   med_speed <- stats::aggregate(x=data[,'speed'],
-                                by=list(data[,'category_name']),
+                                by=list(data[,'category_code']),
                                 FUN=median, na.rm = TRUE)
   mad_speed <- stats::aggregate(x=data[,'speed'],
-                                by=list(data[,'category_name']),
+                                by=list(data[,'category_code']),
                                 FUN=mad, na.rm = TRUE)
   N <- array(as.numeric(table(data$category_code)), dim = nrow(table(data$category_code)))
   meds <- cbind(med_frequency, mad_frequency[,2],
@@ -127,7 +127,12 @@ descriptive_transition <- function(data){
   meds <- median_transition(data)
   means <- mean_transition(data)
   all_stats <- rbind(t(meds[,2:(length(meds)-1)]),t(means[,2:length(means)]))
-  colnames(all_stats) <- paste0('category_',0:(dim(all_stats)[2]-1))
+  cats <- unique(
+    dplyr::group_by(
+      data.frame(codes = data$category_code,
+                 names = data$category_name),codes))
+  cats <- cats[order(cats$codes),]
+  colnames(all_stats) <- cats$names
   all_stats <- data.frame(all_stats)
   return(all_stats)
 }
