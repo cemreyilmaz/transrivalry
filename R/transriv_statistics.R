@@ -132,6 +132,7 @@ descriptive_transition <- function(data){
       data.frame(codes = data$category_code,
                  names = data$category_name),codes))
   cats <- cats[order(cats$codes),]
+  cats <- cats[!is.na(cats)]
   colnames(all_stats) <- cats$names
   all_stats <- data.frame(all_stats)
   return(all_stats)
