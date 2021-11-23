@@ -138,8 +138,6 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
                            width=.2, colour='deepskyblue', alpha=.4, size=1.3) +
     # title and labels
     ggplot2::labs(title=title_tex, x=y_tex, y='Categories') +
-    # x-label positioning
-    ggplot2::theme(axis.text.y = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=0))
   p
   return(p)
 }
