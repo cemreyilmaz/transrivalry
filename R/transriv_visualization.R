@@ -130,16 +130,16 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
   # plot filtered data
   p <- ggplot2::ggplot(stat_data) +
     # first, mean/median
-    ggplot2::geom_point(ggplot2::aes(x=cat_names, y=stat_vals),
+    ggplot2::geom_point(ggplot2::aes(x=stat_vals, y=cat_names),
                         size=1, colour='dimgray', stat='identity', alpha=.9) +
     # then, error bars
-    ggplot2::geom_errorbar(ggplot2::aes(x=cat_names, ymin=stat_vals-error_vals,
-                                       ymax=stat_vals+error_vals),
+    ggplot2::geom_errorbar(ggplot2::aes(y=cat_names, xmin=stat_vals-error_vals,
+                                       xmax=stat_vals+error_vals),
                            width=.2, colour='deepskyblue', alpha=.4, size=1.3) +
     # title and labels
-    ggplot2::labs(title=title_tex, x='Categories', y=y_tex) +
+    ggplot2::labs(title=title_tex, x=y_tex, y='Categories') +
     # x-label positioning
-    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=0))
+    ggplot2::theme(axis.text.y = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=0))
   p
   return(p)
 }
