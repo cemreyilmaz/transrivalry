@@ -137,7 +137,7 @@ plot_stats <- function(stat_data, stat_val, trans_val, cat_names, convert_na){
                                        xmax=stat_vals+error_vals),
                            width=.2, colour='deepskyblue', alpha=.4, size=1.3) +
     # title and labels
-    ggplot2::labs(title=title_tex, x=y_tex, y='Categories') +
+    ggplot2::labs(title=title_tex, x=y_tex, y='Categories')
   p
   return(p)
 }
