@@ -135,15 +135,15 @@ combine_csv_mat <- function(csv_path,mat_path,data){
   questionnaire[questionnaire[,6]=='NA',6] <- 'NaN'
   questionnaire[questionnaire[,7]=='NA',7] <- 'NaN'
   # mixed perception or not
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),19] <- questionnaire[2:dim(questionnaire)[1],3]
+  data$mixed_percept[data$subject_id==as.character(curr_subj_quest[[3]])] <- questionnaire[2:dim(questionnaire)[1],3]
   # dynamism
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),20] <- questionnaire[2:dim(questionnaire)[1],4]
+  data$dynamism[data$subject_id==as.character(curr_subj_quest[[3]])] <- questionnaire[2:dim(questionnaire)[1],4]
   # frequency
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),21] <- as.numeric(questionnaire[2:dim(questionnaire)[1],5])
+  data$frequency[data$subject_id==as.character(curr_subj_quest[[3]])] <- as.numeric(questionnaire[2:dim(questionnaire)[1],5])
   # duration
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),22] <- as.numeric(questionnaire[2:dim(questionnaire)[1],6])
+  data$duration[data$subject_id==as.character(curr_subj_quest[[3]])] <- as.numeric(questionnaire[2:dim(questionnaire)[1],6])
   # speed
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),23] <- as.numeric(questionnaire[2:dim(questionnaire)[1],7])
+  data$speed[data$subject_id==as.character(curr_subj_quest[[3]])] <- as.numeric(questionnaire[2:dim(questionnaire)[1],7])
   # ---------- take the limesurvey ---------- #
   personal <- curr_subj_quest[[1]]
   personal[1,personal[1,]=='NA'] <- 'NaN'
@@ -155,25 +155,25 @@ combine_csv_mat <- function(csv_path,mat_path,data){
   personal[9,personal[9,]=='NA'] <- 'NaN'
   personal[10,personal[10,]=='NA'] <- 'NaN'
   # age
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),1] <- rep(as.numeric(personal[1,2]),)
+  data$age[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[1,2]),)
   # sex
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),2] <- rep(personal[2,2],)
+  data$sex[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(personal[2,2],)
   # education
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),3] <- rep(personal[3,2],)
+  data$education[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(personal[3,2],)
   # diopter_right
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),4] <- rep(as.numeric(personal[4,2]),)
+  data$diopter_right[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
   # diopter_left
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),5] <- rep(as.numeric(personal[5,2]),)
+  data$diopter_left[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
   # handedness
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),6] <- rep(as.numeric(personal[6,2]),)
+  data$handedness[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
   # logMAR_both
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),7] <- rep(as.numeric(personal[7,2]),)
+  data$acuity_both[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
   # logMAR_right
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),8] <- rep(as.numeric(personal[8,2]),)
+  data$acuity_right[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
   # logMAR_left
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),9] <- rep(as.numeric(personal[9,2]),)
+  data$acuity_left[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
   # stereoacuity
-  data[data['subject_id']==as.character(curr_subj_quest[[3]]),10] <- rep(as.numeric(personal[10,2]),)
+  data$stereoacuity[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
   return(data)
 }
 # ---------------------------------------------------------------------------- #

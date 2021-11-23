@@ -37,27 +37,27 @@ median_transition <- function(data){
   data$dynamism[data$dynamism=='NaN']<-NA
   data$dynamism[data$dynamism=='dynamism']<-'dynamic'
   med_duration <- stats::aggregate(x=data[,'duration'],
-                           by=list(data[,'category_code']),
+                           by=list(data[,'category_name']),
                            FUN=median, na.rm = TRUE)
   mad_duration <- stats::aggregate(x=data[,'duration'],
-                                   by=list(data[,'category_code']),
+                                   by=list(data[,'category_name']),
                                    FUN=mad, na.rm = TRUE)
   med_frequency <- stats::aggregate(x=data[,'frequency'],
-                           by=list(data[,'category_code']),
+                           by=list(data[,'category_name']),
                            FUN=median, na.rm = TRUE)
   mad_frequency <- stats::aggregate(x=data[,'frequency'],
-                                    by=list(data[,'category_code']),
+                                    by=list(data[,'category_name']),
                                     FUN=mad, na.rm = TRUE)
   med_speed <- stats::aggregate(x=data[,'speed'],
-                                by=list(data[,'category_code']),
+                                by=list(data[,'category_name']),
                                 FUN=median, na.rm = TRUE)
   mad_speed <- stats::aggregate(x=data[,'speed'],
-                                by=list(data[,'category_code']),
+                                by=list(data[,'category_name']),
                                 FUN=mad, na.rm = TRUE)
   N <- array(as.numeric(table(data$category_code)), dim = nrow(table(data$category_code)))
   meds <- cbind(med_frequency, mad_frequency[,2],
                 med_duration[,2], mad_duration[,2], med_speed[,2], mad_speed[,2],N)
-  colnames(meds) <- c('category_code','median_frequency', 'mad_f',
+  colnames(meds) <- c('category_name','median_frequency', 'mad_f',
                       'median_duration','mad_d','median_speed','mad_s','N')
   return(meds)
 }
