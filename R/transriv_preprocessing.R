@@ -103,79 +103,6 @@ read_mat_data <- function(filelocation){
   output <- list(personal_info,questionnaire,subjectID)
 }
 # ---------------------------------------------------------------------------- #
-#' Combining the csv and mat data into csv file
-#'
-#' The demographic data and the quantitative data of questionnaire are added
-#' into the data stored in csv file.
-#'
-#' @param csv_path character -- the fullpath of csv file
-#' @param mat_path character -- the fullpath of mat file
-#' @param data     data.frame -- transition data (optional)
-#' @note This function uses \link{read_csv_data} and \link{read_mat_data}
-#'     functions while reading the files.
-#' @note It does not change the file. If the file is wanted to be changed,
-#'     one must save the output as csv.
-#' @return data.frame
-#' @export
-#'
-#' @examples
-#' \dontrun{
-#' data <- combine_csv_mat(csv_path,mat_path)
-#' write.csv(data, file = csv_path) # to save onto the csv file}
-combine_csv_mat <- function(csv_path,mat_path,data){
-  if(missing(data)){
-    # read csv file
-    data <- read_csv_data(csv_path)
-  }
-  # read behavioral data of given subject
-  curr_subj_quest <- transrivalry::read_mat_data(mat_path)
-  # ---------- take the questionnaire ---------- #
-  questionnaire <- curr_subj_quest[[2]]
-  questionnaire[questionnaire[,5]=='NA',5] <- 'NaN'
-  questionnaire[questionnaire[,6]=='NA',6] <- 'NaN'
-  questionnaire[questionnaire[,7]=='NA',7] <- 'NaN'
-  # mixed perception or not
-  data$mixed_percept[data$subject_id==as.character(curr_subj_quest[[3]])] <- questionnaire[2:dim(questionnaire)[1],3]
-  # dynamism
-  data$dynamism[data$subject_id==as.character(curr_subj_quest[[3]])] <- questionnaire[2:dim(questionnaire)[1],4]
-  # frequency
-  data$frequency[data$subject_id==as.character(curr_subj_quest[[3]])] <- as.numeric(questionnaire[2:dim(questionnaire)[1],5])
-  # duration
-  data$duration[data$subject_id==as.character(curr_subj_quest[[3]])] <- as.numeric(questionnaire[2:dim(questionnaire)[1],6])
-  # speed
-  data$speed[data$subject_id==as.character(curr_subj_quest[[3]])] <- as.numeric(questionnaire[2:dim(questionnaire)[1],7])
-  # ---------- take the limesurvey ---------- #
-  personal <- curr_subj_quest[[1]]
-  personal[1,personal[1,]=='NA'] <- 'NaN'
-  personal[4,personal[4,]=='NA'] <- 'NaN'
-  personal[5,personal[5,]=='NA'] <- 'NaN'
-  personal[6,personal[6,]=='NA'] <- 'NaN'
-  personal[7,personal[7,]=='NA'] <- 'NaN'
-  personal[8,personal[8,]=='NA'] <- 'NaN'
-  personal[9,personal[9,]=='NA'] <- 'NaN'
-  personal[10,personal[10,]=='NA'] <- 'NaN'
-  # age
-  data$age[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[1,2]),)
-  # sex
-  data$sex[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(personal[2,2],)
-  # education
-  data$education[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(personal[3,2],)
-  # diopter_right
-  data$diopter_right[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
-  # diopter_left
-  data$diopter_left[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
-  # handedness
-  data$handedness[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
-  # logMAR_both
-  data$acuity_both[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
-  # logMAR_right
-  data$acuity_right[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
-  # logMAR_left
-  data$acuity_left[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
-  # stereoacuity
-  data$stereoacuity[data$subject_id==as.character(curr_subj_quest[[3]])] <- rep(as.numeric(personal[4,2]),)
-  return(data)
-}
 # ---------------------------------------------------------------------------- #
 #' Combining the csv and mat data into csv file for the given subjects
 #'
@@ -221,8 +148,7 @@ combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename = "as
                                                              mat_path = filepath))
       utils::write.csv(data,csv_path,row.names = F)
     } else{
-      output <- suppressWarnings(transrivalry::combine_csv_mat(mat_path = filepath,
-                                                             data = data))
+      output <- transrivalry::combine_csv_mat(mat_path = filepath, data = data)
     }
   }
   return(output)
