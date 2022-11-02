@@ -128,7 +128,7 @@ combine_csv_mat <- function(csv_path,mat_path,data){
     data <- read_csv_data(csv_path)
   }
   # read behavioral data of given subject
-  curr_subj_quest <- read_mat_data(mat_path)
+  curr_subj_quest <- transrivalry::read_mat_data(mat_path)
   # ---------- take the questionnaire ---------- #
   questionnaire <- curr_subj_quest[[2]]
   questionnaire[questionnaire[,5]=='NA',5] <- 'NaN'
@@ -217,15 +217,15 @@ combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename = "as
       filepath <- dir(mat_folder, full.names=T, pattern=paste0(curr_subject,basename))
     }
     if(missing(data)){
-      data <- suppressWarnings(transrivalry::combine_csv_mat(csv_path = csv_path,
+      output <- suppressWarnings(transrivalry::combine_csv_mat(csv_path = csv_path,
                                                              mat_path = filepath))
       utils::write.csv(data,csv_path,row.names = F)
     } else{
-      data <- suppressWarnings(transrivalry::combine_csv_mat(mat_path = filepath,
+      output <- suppressWarnings(transrivalry::combine_csv_mat(mat_path = filepath,
                                                              data = data))
     }
   }
-  return(data)
+  return(output)
 }
 # ---------------------------------------------------------------------------- #
 #' Defining the category as immediate when there is no mixed percept
