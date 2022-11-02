@@ -1,8 +1,8 @@
 # ---------------------------------------------------------------------------- #
 #' Combining the demographics and transition questionnaires
 #'
-#' This function combines the demographics and the quantitative data of 
-#' transition questionnaire. 
+#' This function combines the demographics and the quantitative data of
+#' transition questionnaire.
 #'
 #' @param mat_path character -- the fullpath of mat files
 #' @note This function uses \link{read_csv_data} and \link{read_mat_data}
@@ -17,12 +17,14 @@
 #' all_subj  <- rbind(all_subj,curr_subj)
 #' all_data  <- cbind(data, all_subj)}
 combine_demog_trans <- function(csv_path,mat_path){
+  # read behavioral data of given subject
+  curr_subj_quest <- read_mat_data(mat_path)
   # ---------- take the questionnaire ---------- #
   questionnaire <- curr_subj_quest[[2]]
   questionnaire[questionnaire[,5]=='NA',5] <- 'NaN'
   questionnaire[questionnaire[,6]=='NA',6] <- 'NaN'
   questionnaire[questionnaire[,7]=='NA',7] <- 'NaN'
-  
+
   # ---------- take the limesurvey ---------- #
   personal <- curr_subj_quest[[1]]
   personal[1,personal[1,]=='NA'] <- 'NaN'
@@ -33,7 +35,7 @@ combine_demog_trans <- function(csv_path,mat_path){
   personal[8,personal[8,]=='NA'] <- 'NaN'
   personal[9,personal[9,]=='NA'] <- 'NaN'
   personal[10,personal[10,]=='NA'] <- 'NaN'
-  
+
   data <- data.frame( # age
     age = rep(as.numeric(personal[1,2]),dim(questionnaire)[1]-1),
     # sex
