@@ -217,10 +217,12 @@ combine_all_subjects <- function(csv_path,mat_folder,subject_list,basename = "as
       filepath <- dir(mat_folder, full.names=T, pattern=paste0(curr_subject,basename))
     }
     if(missing(data)){
-      data <- suppressWarnings(combine_csv_mat(csv_path,filepath))
+      data <- suppressWarnings(transrivalry::combine_csv_mat(csv_path = csv_path,
+                                                             mat_path = filepath))
       utils::write.csv(data,csv_path,row.names = F)
     } else{
-      data <- suppressWarnings(combine_csv_mat(csv_path,filepath,data))
+      data <- suppressWarnings(transrivalry::combine_csv_mat(mat_path = filepath,
+                                                             data = data))
     }
   }
   return(data)
