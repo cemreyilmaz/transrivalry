@@ -10,7 +10,7 @@ Description: This package is used to analyze the transition data collected in
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
 Imports: utils,
     R.matlab,
     ggplot2
