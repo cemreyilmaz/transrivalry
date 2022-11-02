@@ -22,23 +22,23 @@
 median_transition <- function(data){
   data$dynamism[data$dynamism=='NaN']<-NA
   data$dynamism[data$dynamism=='dynamism']<-'dynamic'
-  med_duration <- stats::aggregate(x=data[,'duration'],
-                                   by=list(data[,'category_code']),
+  med_duration <- stats::aggregate(x=data$duration,
+                                   by=list(data$category_code),
                                    FUN=median, na.rm = TRUE)
-  mad_duration <- stats::aggregate(x=data[,'duration'],
-                                   by=list(data[,'category_code']),
+  mad_duration <- stats::aggregate(x=data$duration,
+                                   by=list(data$category_code),
                                    FUN=mad, na.rm = TRUE)
-  med_frequency <- stats::aggregate(x=data[,'frequency'],
-                                    by=list(data[,'category_name']),
+  med_frequency <- stats::aggregate(x=data$frequency,
+                                    by=list(data$category_code),
                                     FUN=median, na.rm = TRUE)
-  mad_frequency <- stats::aggregate(x=data[,'frequency'],
-                                    by=list(data[,'category_code']),
+  mad_frequency <- stats::aggregate(x=data$frequency,
+                                    by=list(data$category_code),
                                     FUN=mad, na.rm = TRUE)
-  med_speed <- stats::aggregate(x=data[,'speed'],
-                                by=list(data[,'category_code']),
+  med_speed <- stats::aggregate(x=data$speed,
+                                by=list(data$category_code),
                                 FUN=median, na.rm = TRUE)
-  mad_speed <- stats::aggregate(x=data[,'speed'],
-                                by=list(data[,'category_code']),
+  mad_speed <- stats::aggregate(x=data$speed,
+                                by=list(data$category_code),
                                 FUN=mad, na.rm = TRUE)
   N <- array(as.numeric(table(data$category_code)), dim = nrow(table(data$category_code)))
   meds <- cbind(med_frequency, mad_frequency[,2],
