@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------- #
-#' Combining the demographics and questionnaire data into content analysis 
+#' Combining the demographics and questionnaire data into content analysis
 #' results for the given subjects
 #'
 #' This function adds the demographic data and the quantitative data of
@@ -18,7 +18,7 @@
 #' @note It uses \link{combine_demog_trans} function.
 #' @note If one feeds the function with data variable, the output includes
 #'     the given data and the organized data as combined.
-#'     
+#'
 #' @return data.frame
 #' @export
 #'
@@ -44,9 +44,9 @@ combine_all_subjects <- function(mat_folder,subject_list,basename = "assessments
       tmp <- transrivalry::combine_demog_trans(mat_path = filepath)
       output <- rbind(output,tmp)
     }
-    if(!missing(data)){
-      output <- cbind(data,output)
-    }
+  }
+  if(!missing(data)){
+    output <- cbind(data,output)
   }
   return(output)
 }
