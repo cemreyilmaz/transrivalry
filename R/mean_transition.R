@@ -19,23 +19,23 @@
 mean_transition <- function(data){
   data$dynamism[data$dynamism=='NaN']<-NA
   data$dynamism[data$dynamism=='dynamism']<-'dynamic'
-  mean_duration <- stats::aggregate(x=data[,'duration'],
-                                    by=list(data[,'category_code']),
+  mean_duration <- stats::aggregate(x=data$duration,
+                                    by=list(data$category_code),
                                     FUN=mean, na.rm = TRUE)
-  std_duration <- stats::aggregate(x=data[,'duration'],
-                                   by=list(data[,'category_code']),
+  std_duration <- stats::aggregate(x=data$duration,
+                                   by=list(data$category_code),
                                    FUN=sd, na.rm = TRUE)
-  mean_frequency <- stats::aggregate(x=data[,'frequency'],
-                                     by=list(data[,'category_code']),
+  mean_frequency <- stats::aggregate(x=data$frequency,
+                                     by=list(data$category_code),
                                      FUN=mean, na.rm = TRUE)
-  std_frequency <- stats::aggregate(x=data[,'frequency'],
-                                    by=list(data[,'category_code']),
+  std_frequency <- stats::aggregate(x=data$frequency,
+                                    by=list(data$category_code),
                                     FUN=sd, na.rm = TRUE)
-  mean_speed <- stats::aggregate(x=data[,'speed'],
-                                 by=list(data[,'category_code']),
+  mean_speed <- stats::aggregate(x=data$speed,
+                                 by=list(data$category_code),
                                  FUN=mean, na.rm = TRUE)
-  std_speed <- stats::aggregate(x=data[,'speed'],
-                                by=list(data[,'category_code']),
+  std_speed <- stats::aggregate(x=data$speed,
+                                by=list(data$category_code),
                                 FUN=sd, na.rm = TRUE)
   N <- array(as.numeric(table(data$category_code)), dim = nrow(table(data$category_code)))
   means <- cbind(mean_frequency, std_frequency[,2],
