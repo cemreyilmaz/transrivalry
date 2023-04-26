@@ -25,16 +25,12 @@ normalize_frequency <- function(data){
         total_freq <- sum(data$frequency[data$subject_id==c_subj &
                                            data$session_code==c_ses &
                                            data$run_code==c_run])
-        data$frequency[data$subject_id==c_subj &
-                         data$session_code==c_ses &
-                         data$run_code==c_run] <- data$frequency[data$subject_id==c_subj &
-                                                                   data$session_code==c_ses &
-                                                                   data$run_code==c_run] / total_freq
-        data$frequency[data$subject_id==c_subj &
-                         data$session_code==c_ses &
-                         data$run_code==c_run] <- data$frequency[data$subject_id==c_subj &
-                                                                   data$session_code==c_ses &
-                                                                   data$run_code==c_run] * 100
+        tmp <- data$frequency[data$subject_id==c_subj & data$session_code==c_ses
+                              & data$run_code==c_run]
+        tmp[!is.na(tmp)] <- tmp[!is.na(tmp)] / total_freq
+        tmp[!is.na(tmp)] <- tmp[!is.na(tmp)] * 100
+        data$frequency[data$subject_id==c_subj & data$session_code==c_ses
+                       & data$run_code==c_run] <- tmp
       }
     }
   }

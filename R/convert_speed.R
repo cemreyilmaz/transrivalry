@@ -37,11 +37,11 @@ convert_speed <- function(data){
   for(c_subj in subj){
     for(c_ses in ses){
       for(c_run in run){
-        data$speed[data$subject_id==c_subj &
-                     data$session_code==c_ses &
-                     data$run_code==c_run] <- 100 - data$speed[data$subject_id==c_subj &
-                                                                 data$session_code==c_ses &
-                                                                 data$run_code==c_run]
+        tmp <- data$speed[data$subject_id==c_subj & data$session_code==c_ses &
+                            data$run_code==c_run]
+        tmp[!is.na(tmp)] <- 100 - tmp[!is.na(tmp)]
+        data$speed[data$subject_id==c_subj & data$session_code==c_ses &
+                     data$run_code==c_run] <- tmp
       }
     }
   }
