@@ -1,4 +1,4 @@
-category.mat <- function(x_cat = "immediate"){
+category.mat <- function(input = "immediate"){
   # -------------------------------------------------------------------------- #
   # define the categoires as matrices
   # c(mixed/immediate, dyn/static, cancelation/not,
@@ -24,16 +24,21 @@ category.mat <- function(x_cat = "immediate"){
                        "Superimposed traveling wave",  matrix(c(1,1,0,1,1,0,1,0,0), nrow = 3),
                        "Traveling wave",           matrix(c(1,1,0,1,0,0,1,0,0), nrow = 3))
   # -------------------------------------------------------------------------- #
-  indx <- 1:length(dict_categories)
-  indx <- indx[sapply(dict_categories,identical,x_cat)]
-  if(length(indx)>0){
-    if(is.character(x_cat)){
-      res <- dict_categories[indx+1]
+  res <- c()
+  for(i = 1:length(input)){
+    x_cat <- input[i]
+    indx <- 1:length(dict_categories)
+    indx <- indx[sapply(dict_categories,identical,x_cat)]
+    if(length(indx)>0){
+      if(is.character(x_cat)){
+        res <- c(res, dict_categories[indx+1])
+      }else{
+        res <- c(res, dict_categories[indx-1])
+      }
     }else{
-      res <- dict_categories[indx-1]
+      res <- c(res, NULL)
     }
-  }else{
-    res <- NULL
   }
+
   return(res)
 }
