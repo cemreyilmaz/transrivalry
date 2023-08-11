@@ -25,7 +25,7 @@ category.mat <- function(input = "immediate"){
                        "Traveling wave",           matrix(c(1,1,0,1,0,0,1,0,0), nrow = 3))
   # -------------------------------------------------------------------------- #
   res <- c()
-  for(i = 1:length(input)){
+  for(i in 1:length(input)){
     x_cat <- input[i]
     indx <- 1:length(dict_categories)
     indx <- indx[sapply(dict_categories,identical,x_cat)]
