@@ -2,7 +2,7 @@
 % Please edit documentation in R/combine_all_subjects.R, R/read_mat_data.R
 \name{combine_all_subjects}
 \alias{combine_all_subjects}
-\title{Combining the demographics and questionnaire data into content analysis 
+\title{Combining the demographics and questionnaire data into content analysis
 results for the given subjects}
 \usage{
 combine_all_subjects(

@@ -13,7 +13,7 @@ combine_demog_trans(csv_path, mat_path)
 data.frame
 }
 \description{
-This function combines the demographics and the quantitative data of 
+This function combines the demographics and the quantitative data of
 transition questionnaire.
 }
 \note{

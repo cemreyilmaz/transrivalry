@@ -1,4 +1,12 @@
-category.mat <- function(input = "immediate"){
+#' Converting category names into matrices and matrices int category names
+#'
+#' @param input
+#'
+#' @return list
+#' @export
+#'
+#' @examples \dontrun{category.mat(list("Immediate", matrix(c(0,0,0,0,0,0,0,0,0), nrow = 3)))}
+category.mat <- function(input = "Immediate"){
   # -------------------------------------------------------------------------- #
   # define the categoires as matrices
   # c(mixed/immediate, dyn/static, cancelation/not,
@@ -24,7 +32,7 @@ category.mat <- function(input = "immediate"){
                        "Superimposed traveling wave",  matrix(c(1,1,0,1,1,0,1,0,0), nrow = 3),
                        "Traveling wave",           matrix(c(1,1,0,1,0,0,1,0,0), nrow = 3))
   # -------------------------------------------------------------------------- #
-  res <- c()
+  res <- list()
   for(i in 1:length(input)){
     x_cat <- input[i]
     indx <- 1:length(dict_categories)
