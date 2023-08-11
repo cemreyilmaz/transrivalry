@@ -45,17 +45,17 @@ combine_demog_trans <- function(csv_path,mat_path){
     # diopter_right
     r_diop = rep(as.numeric(personal[4,2]),dim(questionnaire)[1]-1),
     # diopter_left
-    l_diop = rep(as.numeric(personal[4,2]),dim(questionnaire)[1]-1),
+    l_diop = rep(as.numeric(personal[5,2]),dim(questionnaire)[1]-1),
     # handedness
-    hand = rep(as.numeric(personal[4,2]),dim(questionnaire)[1]-1),
+    hand = rep(as.numeric(personal[6,2]),dim(questionnaire)[1]-1),
     # logMAR_both
-    acu_both = rep(as.numeric(personal[4,2]),dim(questionnaire)[1]-1),
+    acu_both = rep(as.numeric(personal[7,2]),dim(questionnaire)[1]-1),
     # logMAR_right
-    acu_r = rep(as.numeric(personal[4,2]),dim(questionnaire)[1]-1),
+    acu_r = rep(as.numeric(personal[8,2]),dim(questionnaire)[1]-1),
     # logMAR_left
-    acu_l = rep(as.numeric(personal[4,2]),dim(questionnaire)[1]-1),
+    acu_l = rep(as.numeric(personal[9,2]),dim(questionnaire)[1]-1),
     # stereoacuity
-    stereo = rep(as.numeric(personal[4,2]),dim(questionnaire)[1]-1),
+    stereo = rep(as.numeric(personal[10,2]),dim(questionnaire)[1]-1),
     # mixed perception or not
     mixed_percept = questionnaire[2:dim(questionnaire)[1],3],
     # dynamism
