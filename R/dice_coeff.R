@@ -6,7 +6,8 @@
 #' @return numeric
 #' @export
 #'
-#' @examples /dontrun{dice_coeff(matrix1,matrix2)}
+#' @examples
+#' \dontrun{dice_coeff(matrix1,matrix2)}
 dice_coeff <- function(matrix1,matrix2){
   J <- jaccard.index(matrix1,matrix2)
   S <- 2*J/(1+J)
