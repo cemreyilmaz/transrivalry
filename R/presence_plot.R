@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-presence_plot <- function(curr_data,curr_title,upper_limit){
+presence_plot <- function(curr_data,curr_title,upper_limit,x_labels = c('GG', 'II', 'DD', 'GI', 'DI', 'DG')){
   integer_breaks <- function(n = 5, ...) {
     fxn <- function(x) {
       breaks <- floor(pretty(x, n, ...))
@@ -22,7 +22,7 @@ presence_plot <- function(curr_data,curr_title,upper_limit){
              aes(x = stimulus.pairs, y = number),
              stat="identity") +
     ggtitle(curr_title) +
-    scale_x_discrete(labels = c('GG', 'II', 'DD', 'GI', 'DI', 'DG')) +
+    scale_x_discrete(labels = x_labels) +
     theme(legend.position = "none", # hide legend
           panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
           panel.background = element_blank(), axis.line = element_line(colour = "darkgray"),
